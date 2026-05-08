@@ -6,60 +6,60 @@ import { site } from "@/lib/site";
 const tiers = [
   {
     price: "$1,000",
-    label: "Precision slice",
+    label: "Focused build",
     pitch:
-      "When leadership agrees something must ship—but nobody owns the last mile.",
+      "Perfect when you have one clear job—one automation, one connection between tools, or a simple internal tool.",
     justify: [
-      "Ideal for a narrowly bounded automation, internal prototype, or single-integration workflow your backlog keeps bumping.",
-      "Keeps procurement painless: one stakeholder sign-off, one artifact, one invoice.",
-      "Most teams use this to validate technical feasibility before committing larger capex.",
+      "Small scope, fast turnaround; easy for one decision-maker to say yes.",
+      "Low risk way to prove the idea works before spending more.",
+      "Still includes written scope, delivery, and handoff—you’re not buying a vague “consulting hour.”",
     ],
   },
   {
     price: "$1,500",
-    label: "Momentum sprint",
+    label: "Standard build",
     badge: "Most chosen",
     pitch:
-      "The tier scaling teams pick when they need senior execution without onboarding another vendor org chart.",
+      "What most teams pick when the work is real software people will use—not a slide deck—but still bounded enough to ship on schedule.",
     justify: [
-      "Balances complexity with calendar discipline—typically one primary surface plus supporting integrations.",
-      "Structured for directors who need board-visible progress inside a single reporting window.",
-      "Still fixed-scope: if requirements balloon, we document them for the next engagement instead of silently absorbing risk.",
+      "Usually one main screen or workflow plus a few integrations (e.g. email, Slack, your database).",
+      "You get regular updates during the build so leadership isn’t guessing.",
+      "If the wish list grows, we split Phase 2 into its own quote instead of hiding extra cost.",
     ],
   },
   {
     price: "$3,000",
-    label: "Orchestration layer",
+    label: "Advanced build",
     pitch:
-      "When the initiative touches multiple systems, approval chains, or compliance-sensitive handoffs.",
+      "When several systems need to talk to each other, humans must approve steps along the way, or the logic behind the scenes is heavier.",
     justify: [
-      "Reserved for builds that coordinate APIs, human-in-the-loop review gates, or heavier inference pipelines.",
-      "Documentation depth matches handoff expectations—your internal engineering team inherits something maintainable.",
-      "Appropriate when delay cost exceeds the premium versus smaller tiers.",
+      "Room for multiple integrations, review checkpoints, and more sophisticated AI where it adds value.",
+      "Documentation your own tech team can pick up—or hand off cleanly to another vendor later.",
+      "Worth it when waiting another quarter costs more than moving now.",
     ],
   },
 ];
 
 const included = [
-  "Written scope + acceptance criteria before deposit clears",
-  "Implementation delivered to your repositories and infrastructure accounts",
-  "Executive-readable checkpoints during the build cycle",
-  "Recorded technical walkthrough at milestone completion",
-  "Post-delivery stabilization window (terms vary by tier—confirmed in proposal)",
+  "Written scope and “definition of done” before you pay the deposit",
+  "Working software delivered into your accounts—hosted where you want it",
+  "Plain-English progress updates during the build",
+  "Recorded walkthrough when it’s finished so your team knows how to use it",
+  "Short bug-fix window after launch (exact length spelled out in your proposal)",
 ];
 
 const notIncluded = [
-  "Indefinite roadmap staffing disguised as “phase two”",
-  "Design-system overhaul beyond production-grade UI polish",
-  "Unbounded change requests once scope is frozen",
-  "Native mobile applications (web-first delivery)",
+  "Open-ended “keep adding features forever” retainers",
+  "Full rebrand or pixel-perfect design from scratch",
+  "Scope creep after we freeze the plan—changes become a new quote",
+  "Native iPhone/Android apps (web-based delivery)",
 ];
 
 const timeline = [
-  { day: "Discovery", text: "Structured intro—fit, tier selection, and timeline sanity check." },
-  { day: "Proposal", text: "Same-day written statement of work aligned to your tier." },
-  { day: "Kickoff", text: "Deposit + access provisioning; engineering begins immediately." },
-  { day: "Delivery", text: "Artifact review, documentation transfer, sign-off checkpoint." },
+  { day: "Intro call", text: "We confirm fit and which package matches your goal." },
+  { day: "Proposal", text: "You get a short written plan tied to the package you chose." },
+  { day: "Kickoff", text: "Deposit paid; you share access; building starts." },
+  { day: "Delivery", text: "Walkthrough, handoff, sign-off—then final payment per agreement." },
 ];
 
 export function Offer() {
@@ -68,18 +68,18 @@ export function Offer() {
       <div className="container py-24">
         <div className="max-w-3xl">
           <p className="text-sm font-medium uppercase tracking-wider text-primary">
-            Engagement economics
+            Pricing
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-            Pricing that respects how enterprises actually buy velocity
+            Three fixed packages—and a custom option when you need it
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            You are not hiring “cheap labor.” You are buying a{' '}
+            You are buying a{" "}
             <span className="font-medium text-foreground">
-              time-boxed capability injection
-            </span>{' '}
-            priced against outcomes your organization already agrees matter—without the drag of multi-quarter vendor onboarding.
-            Each tier maps to a realistic complexity envelope. Pick wrong? We correct it on the call before paperwork moves.
+              finished piece of work
+            </span>{" "}
+            at a price we agree before engineering starts—not an open-ended hourly tab or a six-month agency runway.
+            Each package matches a different size of problem; if you’re unsure which fits, the intro call sorts it in minutes.
           </p>
         </div>
 
@@ -124,19 +124,19 @@ export function Offer() {
         <Card className="mt-8 border-dashed bg-muted/40 p-8 lg:flex lg:items-center lg:justify-between lg:gap-10">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-wide text-primary">
-              Beyond the matrix
+              Beyond the packages
             </p>
             <h3 className="mt-2 text-xl font-semibold tracking-tight">
-              Custom architecture &amp; multi-phase programs
+              Need something larger or more tailored?
             </h3>
             <p className="mt-3 text-pretty text-muted-foreground leading-relaxed">
-              Some mandates—regulated environments, legacy core integrations, or portfolio-wide automation strategy—do not compress into a prefabricated SKU.
-              That does not mean “call us eventually.” It means we scope deliberately on a working session, produce a fixed or phased quote you can defend internally, and only then mobilize engineering.
+              Some projects—tough legacy systems, strict compliance rules, or a roadmap spanning several milestones—don’t fit a standard box.
+              Book a scoping call: we map the work in plain language, quote it as one clear project or phased phases you can share internally, and only start once everyone agrees.
             </p>
           </div>
           <Button asChild size="lg" className="mt-8 shrink-0 lg:mt-0">
             <a href={site.calcomUrl}>
-              Book custom scoping call
+              Talk through a custom quote
               <ArrowRight className="h-4 w-4" />
             </a>
           </Button>
@@ -144,7 +144,7 @@ export function Offer() {
 
         <div className="mt-16 grid gap-6 md:grid-cols-3">
           <Card className="p-8">
-            <h3 className="text-base font-semibold">Included across tiers</h3>
+            <h3 className="text-base font-semibold">Every package includes</h3>
             <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
               {included.map((item) => (
                 <li key={item} className="flex gap-3">
@@ -159,7 +159,7 @@ export function Offer() {
           </Card>
 
           <Card className="p-8">
-            <h3 className="text-base font-semibold">Explicitly out of scope</h3>
+            <h3 className="text-base font-semibold">Not covered</h3>
             <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
               {notIncluded.map((item) => (
                 <li key={item} className="flex gap-3">
@@ -174,7 +174,7 @@ export function Offer() {
           </Card>
 
           <Card className="p-8">
-            <h3 className="text-base font-semibold">How intake moves</h3>
+            <h3 className="text-base font-semibold">How it works</h3>
             <dl className="mt-6 space-y-4 text-sm">
               {timeline.map((item) => (
                 <div key={item.day} className="flex flex-col gap-1">

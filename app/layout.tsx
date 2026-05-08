@@ -17,7 +17,7 @@ const mono = JetBrains_Mono({
 });
 
 const description =
-  "Fixed-structure intelligent automation engagements for scaling operators—tiered pricing from focused workflows to multi-system orchestration. Remote execution with US · EU overlap.";
+  "Fixed-price custom AI tools and automations for companies—three clear packages plus custom scoping. Built fast with pricing agreed upfront; remote-friendly with US and EU hours.";
 
 /** Canonical URL for OG/metadata: env overrides → Vercel preview URL → site.domain */
 function resolveMetadataBase(): URL | undefined {

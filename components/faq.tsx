@@ -7,12 +7,12 @@ import {
 
 const faqs = [
   {
-    q: "Why three fixed tiers instead of hourly billing?",
-    a: "Hourly engagements reward drift. Fixed tiers force clarity up front—which is how internal sponsors defend budgets. Each bracket maps to an envelope we both recognize before engineering spends a cycle.",
+    q: "Why fixed-price tiers instead of hourly?",
+    a: "Hourly work encourages dragging timelines and fuzzy invoices. Fixed packages mean you know the cost before we build—which makes approvals easier for managers and finance. Each tier matches a realistic amount of work; we confirm fit on a quick call.",
   },
   {
     q: "Which tier do most organizations choose?",
-    a: "The $1,500 momentum sprint is the default when capability—not headcount—is the bottleneck and leadership wants one decisive milestone inside a tight reporting window. We validate tier fit live so you do not over-buy or under-scope.",
+    a: "The $1,500 Standard build package is what most teams pick when they want working software—not slides—with updates along the way. Not sure? The intro call matches your goal to the right tier.",
   },
   {
     q: "What happens if timelines slip?",
