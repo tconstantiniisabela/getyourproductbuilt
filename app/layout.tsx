@@ -16,8 +16,7 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-const description =
-  "Fixed-price custom AI tools and automations for companies—three clear packages plus custom scoping. Built fast with pricing agreed upfront; remote-friendly with US and EU hours.";
+const description = `${site.companyShort} builds fixed-price AI tools and automations for teams—three clear packages plus custom scoping. Fully remote with deliberate overlap across US and EU business hours.`;
 
 /** Canonical URL for OG/metadata: env overrides → Vercel preview URL → site.domain */
 function resolveMetadataBase(): URL | undefined {
@@ -48,13 +47,13 @@ function resolveMetadataBase(): URL | undefined {
   return undefined;
 }
 
-const titleDefault = `${site.name} — Intelligent automation, procurement-simple`;
+const titleDefault = `${site.companyShort} — Fixed-scope AI tools & automation`;
 
 export const metadata: Metadata = {
   metadataBase: resolveMetadataBase(),
   title: {
     default: titleDefault,
-    template: `%s · ${site.name}`,
+    template: `%s · ${site.companyShort}`,
   },
   description,
   openGraph: {

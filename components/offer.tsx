@@ -74,12 +74,12 @@ export function Offer() {
             Three fixed packages—and a custom option when you need it
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            You are buying a{" "}
+            Organizations engage {site.companyShort} for a{" "}
             <span className="font-medium text-foreground">
               finished piece of work
             </span>{" "}
-            at a price we agree before engineering starts—not an open-ended hourly tab or a six-month agency runway.
-            Each package matches a different size of problem; if you’re unsure which fits, the intro call sorts it in minutes.
+            at a price fixed before engineering starts—not an open-ended hourly tab or a six-month agency runway.
+            Each package matches a different size of problem; if you&apos;re unsure which fits, the intro call sorts it in minutes.
           </p>
         </div>
 

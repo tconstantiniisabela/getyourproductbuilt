@@ -18,7 +18,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "inbox-triage",
     title: "Enterprise-grade support triage for high-volume commerce analytics",
     oneLiner:
-      "Reduced manual tier-one handling by routing repetitive inquiries through structured classification—with human-approved drafts and escalation paths ops trusts.",
+      "Reduced manual tier-one handling by routing repetitive inquiries through structured classification—with human-approved drafts and escalation paths that operations teams trust.",
     loomUrl: site.loomInbox,
     problem:
       "A mid-market analytics operator supporting Shopify-adjacent merchants was burning senior capacity on tier-one mail—roughly half of volume repeated the same five themes. Leadership needed retention-sensitive replies to remain human-authored while stripping cognitive load from obvious buckets.",

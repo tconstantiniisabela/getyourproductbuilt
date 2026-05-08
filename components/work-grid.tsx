@@ -7,7 +7,7 @@ export const projects = [
     slug: "inbox-triage",
     title: "Enterprise-grade support triage for high-volume commerce analytics",
     summary:
-      "Reduced manual tier-one handling by routing repetitive inquiries through structured classification—with human-approved drafts and escalation paths ops trusts.",
+      "Reduced manual tier-one handling by routing repetitive inquiries through structured classification—with human-approved drafts and escalation paths that operations teams trust.",
     tags: ["Next.js", "LLM orchestration", "Slack", "5-day cycle"],
   },
   {
@@ -38,7 +38,7 @@ export function WorkGrid() {
             Representative outcomes
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Illustrative programs executed inside compressed delivery cycles—the kind of builds leadership green-lights when external credibility matters as much as internal throughput.
+            Representative work from Northtrace—delivered in short cycles that leadership can approve when external credibility matters as much as internal throughput.
           </p>
         </div>
 

@@ -2,33 +2,33 @@ import { site } from "@/lib/site";
 
 const points = [
   {
-    title: "The quote matches what ships.",
+    title: "The proposal matches what we ship.",
     body:
-      "Underestimating complexity is my liability—not yours. Scope changes happen only when leadership signs off in writing. That is how grown-up procurement runs.",
+      "Underestimating complexity sits on our side—not yours. Scope expands only when leadership signs change orders in writing. That is how mature procurement stays predictable.",
   },
   {
     title: "Timezone discipline without theatrics.",
     body:
-      "Remote-first execution with deliberate overlap across US and EU business windows. Kickoff locks explicit review cadences so nobody waits on ambiguous async silence.",
+      "Remote-first pods with deliberate overlap across US and EU business windows. Kickoff locks review cadences so nobody waits on ambiguous silence.",
   },
   {
     title: "You inherit the asset—not a black box.",
     body:
-      "Deliverables land in your repos and environments. No mandatory middleware you cannot sunset. Your internal platform team—or your next partner—can extend without archaeology.",
+      "Artifacts land in your repos and environments. No mandatory middleware you cannot sunset. Your internal platform team—or your next partner—extends without archaeology.",
   },
   {
-    title: "Underpromise on calendars; overcommunicate on risk.",
+    title: "Honest calendars before heroic promises.",
     body:
-      "If an initiative deserves more runway than the tier suggests, you hear it before signatures—not after deposits clear.",
+      "If an initiative needs more runway than the tier allows, you hear it before signatures—not after deposits clear.",
   },
   {
     title: "Engagements terminate cleanly.",
     body:
-      "This is structured acceleration, not disguised staff augmentation. When the milestone lands, governance stays yours.",
+      "Structured acceleration—not disguised staff augmentation. When milestones land, governance stays yours.",
   },
   {
     title: "Receipts in public.",
-    body: `Technical narrative and delivery artifacts surface on X (${site.xHandle})—substance over polish.`,
+    body: `Delivery commentary and build artifacts surface on X (${site.xHandle})—substance over polish.`,
   },
 ];
 
@@ -44,10 +44,10 @@ export function HowIWork() {
             Operating principles
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-            How engagements run when reputations are on the line
+            How {site.companyShort} runs engagements under scrutiny
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Six rules before we reserve calendar—because organizations your size do not reward ambiguity.
+            Six standards before we hold calendar—because enterprises do not reward ambiguity.
           </p>
         </div>
 

@@ -8,22 +8,22 @@ export function Hero() {
     <section className="container flex min-h-[calc(100vh-4rem)] flex-col justify-center py-24">
       <div className="max-w-3xl">
         <p className="text-sm font-medium uppercase tracking-wider text-primary">
-          Custom AI tools &amp; automation for companies
+          {site.companyShort} · Custom AI tools &amp; automation for companies
         </p>
         <h1 className="mt-4 text-balance text-4xl font-semibold leading-[1.08] tracking-tight md:text-5xl lg:text-[3.25rem] lg:leading-[1.06]">
           The project stuck on everyone&apos;s list?{" "}
           <span className="text-muted-foreground">
-            I build it—fast, clear price, no mystery process.
+            We ship it—fast, fixed price, no mystery process.
           </span>
         </h1>
         <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          You tell me what needs to exist: for example a smarter customer-support
-          workflow, automatic weekly reports pulled from your existing tools, or a
-          web app that connects the software you already pay for. I design it,
-          build it, hand it over with a walkthrough, and you keep everything—the
-          code, the accounts, the keys. Fixed packages so finance sees a number
-          before anyone writes code. Updates while we build so you&apos;re never in
-          the dark.
+          You describe what needs to exist—smarter customer-support workflows,
+          automatic weekly reports pulled from tools you already use, or a web app
+          that connects your stack end to end. Our team designs it, builds it, and
+          hands it over with a recorded walkthrough. You keep the code, accounts,
+          and keys. Packages are priced before engineering starts so finance sees a
+          real number up front. Structured updates throughout so stakeholders stay
+          aligned.
         </p>
         <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
           <Button asChild size="lg">
@@ -54,7 +54,7 @@ export function Hero() {
               Agreed upfront
             </dd>
             <dd className="mt-1 text-sm text-muted-foreground">
-              You pick a package that fits the size of the job—no surprise invoices.
+              Packages scoped to job size—no surprise invoices after kickoff.
             </dd>
           </div>
           <div>
@@ -65,7 +65,7 @@ export function Hero() {
               Short sprints
             </dd>
             <dd className="mt-1 text-sm text-muted-foreground">
-              Built in days or weeks—not quarters—with regular check-ins so you see progress.
+              Delivered in days or weeks—not quarters—with checkpoints your team can plan around.
             </dd>
           </div>
           <div>
@@ -76,7 +76,7 @@ export function Hero() {
               US &amp; EU hours
             </dd>
             <dd className="mt-1 text-sm text-muted-foreground">
-              Calls and updates scheduled when your team is actually at work.
+              Calls and status blocks aligned with your business calendar.
             </dd>
           </div>
         </dl>
@@ -85,10 +85,10 @@ export function Hero() {
             href={site.xUrl}
             className="font-medium text-foreground underline-offset-4 hover:underline"
           >
-            Behind-the-scenes on X
+            Delivery notes on X
           </a>
           <span className="mx-2 text-border">·</span>
-          Lives in your systems—you own what ships
+          Deployed inside your systems—you retain ownership end to end
         </p>
       </div>
     </section>

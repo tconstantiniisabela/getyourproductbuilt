@@ -10,7 +10,7 @@ export function Nav() {
           href="/"
           className="text-sm font-semibold tracking-tight hover:text-primary transition-colors"
         >
-          {site.name}
+          {site.companyShort}
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
           <Link
@@ -29,7 +29,7 @@ export function Nav() {
             href="#how-i-work"
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
-            How I work
+            How we work
           </Link>
           <Link
             href="#about"

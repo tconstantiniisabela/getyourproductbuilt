@@ -8,39 +8,39 @@ import {
 const faqs = [
   {
     q: "Why fixed-price tiers instead of hourly?",
-    a: "Hourly work encourages dragging timelines and fuzzy invoices. Fixed packages mean you know the cost before we build—which makes approvals easier for managers and finance. Each tier matches a realistic amount of work; we confirm fit on a quick call.",
+    a: "Hourly engagements blur timelines and invoices. Fixed packages tell finance exactly what they are approving before build starts. Each tier reflects a realistic workload band—we validate fit on a short intro call.",
   },
   {
     q: "Which tier do most organizations choose?",
-    a: "The $1,500 Standard build package is what most teams pick when they want working software—not slides—with updates along the way. Not sure? The intro call matches your goal to the right tier.",
+    a: "The $1,500 Standard build package is the default when teams want usable software—not decks—with visible progress during delivery. Unsure? We map scope to the right bracket live.",
   },
   {
     q: "What happens if timelines slip?",
-    a: "Commercial terms tie remainder payments to acceptance checkpoints documented in your proposal. If delay originates from my execution without an approved scope amendment, remedies are spelled out before kickoff—no suspense.",
+    a: "Remainder payments tie to acceptance checkpoints spelled out in your proposal. If delay originates on our side without an approved scope amendment, remedies are defined before kickoff—no ambiguity.",
   },
   {
-    q: "Are your case studies named enterprise references?",
-    a: "Representative deliveries shown here anonymize or composite metrics where NDAs apply. Named references become available as engagements authorize public attribution.",
+    q: "Are these case studies named enterprise references?",
+    a: "Representative deliveries anonymize or composite metrics where NDAs apply. Named references surface once clients authorize public attribution.",
   },
   {
     q: "Can engineering leadership audit artifacts before commitment?",
-    a: "Yes—intro calls include architectural walk-throughs of comparable codebases. Mobilization begins once procurement milestones you define are satisfied.",
+    a: "Yes—intro calls include architectural reviews of comparable builds. Mobilization begins once procurement milestones on your side are satisfied.",
   },
   {
-    q: "Where are you physically located?",
-    a: "Fully remote with intentional overlap across US and EU business hours. Invoicing is USD via standardized rails so finance reconciliation stays frictionless.",
+    q: "Where is Northtrace based?",
+    a: "Fully remote with deliberate overlap across US and EU business hours. Invoicing runs in USD through standard corporate rails for simpler reconciliation.",
   },
   {
-    q: "What stacks and compliance postures do you support?",
-    a: "Primary delivery surfaces on modern web stacks—Next.js-class frameworks, managed Postgres, enterprise API gateways, and inference endpoints from tier-one model providers. Sensitive workloads route through your VPC boundaries and secrets managers.",
+    q: "What technologies does Northtrace support?",
+    a: "Modern web platforms (including Next.js-class stacks), managed databases, enterprise API gateways, and inference endpoints from tier-one providers. Sensitive workloads remain inside your chosen boundaries and secrets tooling.",
   },
   {
-    q: "Do you operate as an embedded team?",
-    a: "Structured accelerations first. If sequential mandates justify retained capacity after delivery, we scope a bounded continuation—not an open-ended bench.",
+    q: "Does Northtrace embed as staff augmentation?",
+    a: "We lead structured accelerations first. If subsequent mandates justify retained capacity, we quote bounded continuation phases—not open-ended benches.",
   },
   {
     q: "Legal frameworks?",
-    a: "Mutual NDAs standard. Blanket exclusivity or non-competes that block adjacent sectors are non-starters.",
+    a: "Mutual NDAs are standard. Blanket exclusivity or cross-sector non-competes are outside our policy.",
   },
 ];
 

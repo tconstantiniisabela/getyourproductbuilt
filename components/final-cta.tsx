@@ -11,17 +11,17 @@ export function FinalCta() {
             Decision window
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-            You already know what stays on the roadmap costs more than any invoice here.
+            You already know deferred roadmap work costs more than any package here.
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Fifteen minutes separates “another initiative deferred” from a scoped engagement
-            your CFO can recognize. If we are not the right execution lane, you leave with
-            architecture notes—not a sales drip campaign.
+            Fifteen minutes separates another delayed initiative from a scoped engagement
+            your CFO can defend. If {site.companyShort} is not the right lane, you leave
+            with architecture guidance—not an automated nurture sequence.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4">
             <Button asChild size="lg">
               <a href={site.calcomUrl}>
-                Lock a calendar slot
+                Hold time with our team
                 <ArrowRight className="h-4 w-4" />
               </a>
             </Button>

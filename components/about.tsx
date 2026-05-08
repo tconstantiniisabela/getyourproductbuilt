@@ -8,38 +8,37 @@ export function About() {
       <div className="container py-24">
         <div className="max-w-3xl">
           <p className="text-sm font-medium uppercase tracking-wider text-primary">
-            Principal execution partner
+            Who we are
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-            About {site.name}
+            About {site.companyName}
           </h2>
 
           <div className="mt-10 space-y-6 text-pretty text-lg leading-relaxed text-muted-foreground">
             <p>
-              I&apos;m {site.name}—I build at the intersection of product discipline and
-              applied machine intelligence for organizations tired of watching strategic
-              bets decay inside ticket queues.
+              {site.companyShort} is a focused delivery studio: senior builders,
+              product strategists, and integration specialists who turn stalled roadmaps
+              into working software—without standing up another permanent engineering org.
             </p>
             <p>
-              My background is product management. What accelerated my practice was a
-              deliberate toolchain: proprietary rapid-deployment pipelines paired with
-              frontier inference APIs, disciplined CI/CD, and scope instrumentation that
-              turns ambiguous directives into signed acceptance criteria. Your steering
-              committee sees progress the same way engineering does—in commits, not vibes.
+              Our stack pairs disciplined scope governance with modern AI inference,
+              automated pipelines, and infrastructure patterns enterprises already trust.
+              Steering committees see the same evidence engineering does—demo-backed
+              checkpoints tied to written acceptance criteria—so procurement and delivery
+              stay in sync.
             </p>
             <p>
-              Whether you are a scale-up stretching toward enterprise readiness or an
-              established operator modernizing internal workflows, the pattern holds:
-              compress decision latency, ship measurable increments, hand off something
-              defensible. If your organization already agrees what “good” looks like but
-              cannot resource it—this is the straightest line between intent and production.
+              Whether you are scaling toward enterprise rigor or modernizing internal
+              operations, we compress decision latency: scoped proposals first, delivery
+              second, clean handoff third. When internal bandwidth returns, your team can
+              extend what we ship—or engage us for the next milestone without ambiguity.
             </p>
           </div>
 
           <div className="mt-10">
             <Button asChild size="lg">
               <a href={site.calcomUrl}>
-                Schedule an intro
+                Schedule an intro with our team
                 <ArrowRight className="h-4 w-4" />
               </a>
             </Button>

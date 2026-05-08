@@ -40,19 +40,18 @@ That shorter `cd` only works when your shell’s working directory is already th
 
 The whole site is wired through one file: `lib/site.ts`. Open it and replace every `[YOUR_*]` placeholder with your real value:
 
-- `name` — your full name (used in nav, footer, copyright)
-- `firstName` — used in the About section heading and intro line
-- `domain` — e.g. `belabuilds.com` (no protocol). Drives metadata + OG.
+- `companyName` — brand name (footer, About heading), e.g. Northtrace
+- `companyShort` — short wordmark where repeated (nav, SEO titles); often same as `companyName`
+- `principalName` — optional signing contact for contracts (not shown in main marketing)
+- `domain` — e.g. `getyourproductbuilt.com` (no protocol). Drives metadata + OG.
 - `email` — the email on the FAQ + final CTA
-- `xHandle` — without the `@`, e.g. `belabuilds`
+- `xHandle` — without the `@`
 - `xUrl` — full URL to your X profile
 - `linkedinUrl` — full URL to your LinkedIn profile
-- `calcomUrl` — your Cal.com booking URL (e.g. `https://cal.com/belabuilds/intro`)
+- `calcomUrl` — your Cal.com booking URL (e.g. `https://cal.com/your-org/intro`)
 - `loomInbox`, `loomLeadQualifier`, `loomWeeklyReport` — your 3 case-study Looms
 
-Then open `components/about.tsx` and replace `[YOUR_LAST_ROLE_OR_FIELD]` with whatever you actually did before (one short phrase, e.g. "marketing analytics" or "operations").
-
-That's the only manual edit outside `lib/site.ts`. Everything else flows through.
+Marketing copy lives in `components/`; tune voice there if you rebrand.
 
 ## Edit content
 
