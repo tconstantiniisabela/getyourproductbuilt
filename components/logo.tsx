@@ -8,49 +8,47 @@ type LogoProps = {
 };
 
 /**
- * Brand mark from your shared raster artwork (`public/northtrace-mark.png`),
- * processed to white/dark transparent PNGs (`npm run process-logo`).
+ * Full-color AxisForge Labs lockup (`public/northtrace-mark.png` → `npm run process-logo`).
+ * Lockup image already includes the wordmark; visible adjacent text is omitted (sr-only for a11y).
  */
 export function Logo({ className, variant = "lockup" }: LogoProps) {
   if (variant === "mark") {
     return (
-      <NorthtraceMark
-        className="h-8 w-8 sm:h-9 sm:w-9"
+      <LogoMark
+        className="h-9 max-h-10 sm:h-10"
         aria-label={site.companyShort}
       />
     );
   }
 
   return (
-    <span className={cn("inline-flex items-center gap-2.5", className)}>
-      <NorthtraceMark className="h-8 w-8 sm:h-9 sm:w-9" aria-hidden />
-      <span className="font-semibold tracking-tight text-foreground">
-        {site.companyShort}
-      </span>
+    <span className={cn("inline-flex items-center", className)}>
+      <LogoMark className="h-10 max-h-11 sm:h-11" aria-hidden />
+      <span className="sr-only">{site.companyShort}</span>
     </span>
   );
 }
 
-export function NorthtraceMark({
-  className,
-  ...props
-}: ComponentProps<"span">) {
+export function LogoMark({ className, ...props }: ComponentProps<"span">) {
   return (
     <span
       data-mark
-      className={cn("relative inline-block aspect-square shrink-0", className)}
+      className={cn(
+        "relative inline-flex shrink-0 items-center overflow-visible",
+        className,
+      )}
       {...props}
     >
       <img
         src="/northtrace-mark-dark.png"
         alt=""
-        className="absolute inset-0 block h-full w-full object-contain dark:hidden"
+        className="max-h-full w-auto max-w-[min(100vw-2rem,280px)] object-contain object-left dark:hidden"
         draggable={false}
       />
       <img
         src="/northtrace-mark-white.png"
         alt=""
-        className="absolute inset-0 hidden h-full w-full object-contain dark:block"
+        className="hidden max-h-full w-auto max-w-[min(100vw-2rem,280px)] object-contain object-left dark:block"
         draggable={false}
       />
     </span>

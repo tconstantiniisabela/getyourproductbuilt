@@ -33,3 +33,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local marketing toolkit data (leads, events, generated drafts)
+/data/marketing/*.json
+!/data/marketing/.gitkeep
+
+# Generated drafts (may contain campaign copy)
+/data/marketing/output/*.md

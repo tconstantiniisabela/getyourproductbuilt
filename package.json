@@ -7,13 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "process-logo": "node scripts/process-northtrace-logo.mjs"
+    "process-logo": "node scripts/process-northtrace-logo.mjs",
+    "marketing": "tsx scripts/marketing/cli.ts"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "googleapis": "^171.4.0",
     "lucide-react": "^0.460.0",
     "next": "14.2.18",
     "next-themes": "^0.4.3",
@@ -30,6 +32,7 @@
     "sharp": "^0.34.5",
     "tailwindcss": "^3.4.14",
     "tailwindcss-animate": "^1.0.7",
+    "tsx": "^4.19.2",
     "typescript": "^5.6.3"
   }
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { NorthtraceMark } from "@/components/logo";
+import { LogoMark } from "@/components/logo";
+import { site } from "@/lib/site";
 import { Card } from "@/components/ui/card";
 
 export const projects = [
@@ -36,11 +37,11 @@ export function WorkGrid() {
             Instrumented deliveries
           </p>
           <h2 className="mt-3 flex flex-wrap items-center gap-3 text-3xl font-semibold tracking-tight md:text-4xl">
-            <NorthtraceMark className="h-10 w-10 shrink-0 md:h-11 md:w-11" aria-hidden />
+            <LogoMark className="h-11 max-h-12 shrink-0 md:h-12 md:max-h-14" aria-hidden />
             <span>Representative outcomes</span>
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Representative work from Northtrace—delivered in short cycles that leadership can approve when external credibility matters as much as internal throughput.
+            Representative work from {site.companyShort}—delivered in short cycles that leadership can approve when external credibility matters as much as internal throughput.
           </p>
         </div>
 

@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section className="container flex min-h-[calc(100vh-4rem)] flex-col justify-center py-24">
       <div className="max-w-3xl">
-        <Logo className="[&_[data-mark]]:h-11 [&_[data-mark]]:w-11 sm:[&_[data-mark]]:h-12 sm:[&_[data-mark]]:w-12" />
+        <Logo className="[&_[data-mark]]:h-14 [&_[data-mark]]:max-h-[4.5rem] sm:[&_[data-mark]]:h-16 sm:[&_[data-mark]]:max-h-[5rem]" />
         <p className="mt-5 text-sm font-medium uppercase tracking-wider text-primary">
           Custom AI tools &amp; automation for companies
         </p>

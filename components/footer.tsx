@@ -1,4 +1,4 @@
-import { NorthtraceMark } from "@/components/logo";
+import { LogoMark } from "@/components/logo";
 import { site } from "@/lib/site";
 
 export function Footer() {
@@ -6,8 +6,8 @@ export function Footer() {
     <footer className="border-t border-border">
       <div className="container flex flex-col items-start justify-between gap-6 py-10 text-sm text-muted-foreground sm:flex-row sm:items-center">
         <div className="flex max-w-xl items-start gap-3">
-          <NorthtraceMark
-            className="mt-0.5 h-6 w-6 shrink-0 opacity-90"
+          <LogoMark
+            className="mt-0.5 h-8 max-h-8 shrink-0 opacity-95"
             aria-hidden
           />
           <div>

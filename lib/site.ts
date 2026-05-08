@@ -3,9 +3,9 @@
 
 export const site = {
   /** Public-facing brand name */
-  companyName: "Northtrace",
+  companyName: "AxisForge Labs",
   /** Same as company name—kept for call sites that need a short wordmark */
-  companyShort: "Northtrace",
+  companyShort: "AxisForge Labs",
   /**
    * Optional principal contact for contracts—kept out of main marketing copy.
    * Remove if you standardize on company-only signing.
@@ -23,3 +23,13 @@ export const site = {
   loomLeadQualifier: "[YOUR_LOOM_URL_LEAD_QUALIFIER]",
   loomWeeklyReport: "[YOUR_LOOM_URL_WEEKLY_REPORT]",
 } as const;
+
+/** Canonical site URL for outbound links (email, social drafts). Uses NEXT_PUBLIC_SITE_URL or SITE_URL when set. */
+export function siteOrigin(): string {
+  const fromEnv =
+    typeof process !== "undefined"
+      ? (process.env.NEXT_PUBLIC_SITE_URL ?? process.env.SITE_URL)?.trim()
+      : undefined;
+  if (fromEnv) return fromEnv.replace(/\/$/, "");
+  return `https://${site.domain}`;
+}

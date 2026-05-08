@@ -65,6 +65,7 @@ You’ll get a live URL like **`https://portfolio-xxxxx.vercel.app`**.
 | **SEO when domain is real** | In Vercel → **Settings → Environment Variables**, add `NEXT_PUBLIC_SITE_URL` = `https://yourdomain.com` (your exact canonical URL, with `https://`). Redeploy. |
 | **`site.domain` in code** | Keep [`lib/site.ts`](lib/site.ts) `domain` aligned with the hostname you want long-term (helps consistency even though Vercel/env drives metadata when set). |
 | **Case study Looms** | Replace `loomInbox`, `loomLeadQualifier`, `loomWeeklyReport` in [`lib/site.ts`](lib/site.ts) with real Loom share URLs. |
+| **Internal marketing dashboard** | `/tools/marketing` — needs env vars (`MARKETING_DASHBOARD_SECRET`, Google OAuth, `OPENAI_API_KEY`, etc.). Full checklist: [MARKETING-DASHBOARD-SETUP.md](MARKETING-DASHBOARD-SETUP.md). |
 
 ### 6. CLI alternative (optional)
 
@@ -80,4 +81,4 @@ Log in when prompted, link to a project, then `vercel --prod` for production.
 
 ---
 
-**Security:** This repo is safe for GitHub — no secrets in code. Never commit `.env.local` with API keys (you don’t need env vars for this static marketing site unless you add analytics later).
+**Security:** This repo is safe for GitHub — no secrets in code. Never commit `.env.local` with API keys or dashboard secrets. Add sensitive vars only in Vercel/host env or local `.env.local`.

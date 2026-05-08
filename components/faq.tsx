@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { site } from "@/lib/site";
 
 const faqs = [
   {
@@ -27,15 +28,15 @@ const faqs = [
     a: "Yes—intro calls include architectural reviews of comparable builds. Mobilization begins once procurement milestones on your side are satisfied.",
   },
   {
-    q: "Where is Northtrace based?",
+    q: `Where is ${site.companyShort} based?`,
     a: "Fully remote with deliberate overlap across US and EU business hours. Invoicing runs in USD through standard corporate rails for simpler reconciliation.",
   },
   {
-    q: "What technologies does Northtrace support?",
+    q: `What technologies does ${site.companyShort} support?`,
     a: "Modern web platforms (including Next.js-class stacks), managed databases, enterprise API gateways, and inference endpoints from tier-one providers. Sensitive workloads remain inside your chosen boundaries and secrets tooling.",
   },
   {
-    q: "Does Northtrace embed as staff augmentation?",
+    q: `Does ${site.companyShort} embed as staff augmentation?`,
     a: "We lead structured accelerations first. If subsequent mandates justify retained capacity, we quote bounded continuation phases—not open-ended benches.",
   },
   {

@@ -1,8 +1,10 @@
 /**
- * Builds raster logos from public/northtrace-mark.png (your shared artwork):
- * - northtrace-mark-white.png — white strokes, transparent bg (dark theme)
- * - northtrace-mark-dark.png — near-black strokes, transparent bg (light theme)
- * - app/icon.png — white mark on #0a0a0a (browser tab)
+ * Builds raster logos from public/northtrace-mark.png:
+ * - northtrace-mark-white.png — full-color mark on transparent (shown on dark UI; preserves blues from source)
+ * - northtrace-mark-dark.png — darkened same hue for light backgrounds
+ * - app/icon.png — colored mark centered on #0a0a0a (browser tab)
+ *
+ * Handles dark canvases with colored strokes (e.g. blue on black), not only grey-on-black.
  *
  * Run: npm run process-logo
  */
@@ -14,8 +16,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
 const inputPath = join(root, "public/northtrace-mark.png");
 
-const BG_CUTOFF = 26;
-const MID = 88;
+/** Ignore near-black background pixels */
+const BG_CUTOFF = 18;
+/** Treat strong signal as fully opaque */
+const MID = 92;
 
 function dilate(alpha, w, h) {
   const out = new Uint8Array(w * h);
@@ -37,10 +41,27 @@ function dilate(alpha, w, h) {
   return out;
 }
 
-function lumToAlpha(lum) {
-  if (lum <= BG_CUTOFF) return 0;
-  if (lum >= MID) return 255;
-  return Math.round(((lum - BG_CUTOFF) / (MID - BG_CUTOFF)) * 255);
+/** Separate logo paint from dark background using luminance + chroma */
+function fgAlpha(r, g, b) {
+  const lum = 0.299 * r + 0.587 * g + 0.114 * b;
+  const chroma = Math.max(r, g, b) - Math.min(r, g, b);
+  const signal = Math.max(lum, chroma * 2.4);
+  if (signal <= BG_CUTOFF) return 0;
+  if (signal >= MID) return 255;
+  return Math.round(((signal - BG_CUTOFF) / (MID - BG_CUTOFF)) * 255);
+}
+
+function rgbaTinted(src, mask, w, h, channels, rgbMul) {
+  const buf = Buffer.alloc(w * h * 4);
+  for (let i = 0; i < w * h; i++) {
+    const a = mask[i];
+    const si = i * channels;
+    buf[i * 4] = Math.round(Math.min(255, src[si] * rgbMul));
+    buf[i * 4 + 1] = Math.round(Math.min(255, src[si + 1] * rgbMul));
+    buf[i * 4 + 2] = Math.round(Math.min(255, src[si + 2] * rgbMul));
+    buf[i * 4 + 3] = a;
+  }
+  return buf;
 }
 
 const { data, info } = await sharp(inputPath)
@@ -58,47 +79,33 @@ for (let y = 0; y < height; y++) {
     const r = src[i];
     const g = src[i + 1];
     const b = src[i + 2];
-    const lum = 0.299 * r + 0.587 * g + 0.114 * b;
-    alphas[y * width + x] = lumToAlpha(lum);
+    alphas[y * width + x] = fgAlpha(r, g, b);
   }
 }
 
-/** Two passes gently thicken the strokes vs the original raster */
 const mask = dilate(dilate(alphas, width, height), width, height);
 
-function rgbaFromMask(maskBuf, w, h, fillR, fillG, fillB) {
-  const buf = Buffer.alloc(w * h * 4);
-  for (let i = 0; i < w * h; i++) {
-    const a = maskBuf[i];
-    buf[i * 4] = fillR;
-    buf[i * 4 + 1] = fillG;
-    buf[i * 4 + 2] = fillB;
-    buf[i * 4 + 3] = a;
-  }
-  return buf;
-}
+const colorOnDarkUi = rgbaTinted(src, mask, width, height, channels, 1);
+const colorForLightUi = rgbaTinted(src, mask, width, height, channels, 0.48);
 
-const whiteRgba = rgbaFromMask(mask, width, height, 255, 255, 255);
-const darkRgba = rgbaFromMask(mask, width, height, 12, 12, 12);
-
-await sharp(whiteRgba, {
+await sharp(colorOnDarkUi, {
   raw: { width, height, channels: 4 },
 })
-  .resize(640, 640, { fit: "inside", withoutEnlargement: true })
+  .resize(720, 720, { fit: "inside", withoutEnlargement: true })
   .png()
   .toFile(join(root, "public/northtrace-mark-white.png"));
 
-await sharp(darkRgba, {
+await sharp(colorForLightUi, {
   raw: { width, height, channels: 4 },
 })
-  .resize(640, 640, { fit: "inside", withoutEnlargement: true })
+  .resize(720, 720, { fit: "inside", withoutEnlargement: true })
   .png()
   .toFile(join(root, "public/northtrace-mark-dark.png"));
 
-const iconMark = await sharp(whiteRgba, {
+const iconMark = await sharp(colorOnDarkUi, {
   raw: { width, height, channels: 4 },
 })
-  .resize(34, 34, {
+  .resize(36, 36, {
     fit: "contain",
     background: { r: 0, g: 0, b: 0, alpha: 0 },
   })
