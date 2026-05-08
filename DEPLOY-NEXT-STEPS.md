@@ -28,12 +28,12 @@ If that fails, install [Xcode Command Line Tools](https://developer.apple.com/do
 
 ### 3. Push this folder to GitHub
 
-In Terminal:
+An initial commit already exists in `portfolio/`. In Terminal:
 
 ```bash
 cd "/Users/isabelatarczewski/Desktop/Cursor - Bela/cursor-build-service/portfolio"
 
-# First time only — use your GitHub email + name
+# Recommended — matches your GitHub account (used on future commits too)
 git config user.email "you@example.com"
 git config user.name "Your Name"
 
@@ -42,7 +42,7 @@ git branch -M main
 git push -u origin main
 ```
 
-Replace `YOUR_USERNAME/YOUR_REPO` with your real repo URL.
+Replace `YOUR_USERNAME/YOUR_REPO` with your real repo URL. If `git remote add` errors because `origin` exists, run `git remote remove origin` first, then add again.
 
 ### 4. Deploy on Vercel
 

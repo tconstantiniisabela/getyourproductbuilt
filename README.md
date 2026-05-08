@@ -72,21 +72,11 @@ Default theme is **dark**. Toggle via `defaultTheme` in `app/layout.tsx`. Colors
 
 ## Deploy to Vercel
 
-Follow `../01-portfolio-site/DEPLOY.md`. The TL;DR:
+**Start here:** [DEPLOY-NEXT-STEPS.md](DEPLOY-NEXT-STEPS.md) — git history is initialized in this folder; add GitHub remote and import on Vercel.
 
-1. Initialize a git repo *inside* this folder (not the parent monorepo):
-   ```bash
-   cd cursor-build-service/portfolio
-   git init
-   git add .
-   git commit -m "Initial portfolio commit"
-   ```
-2. Push to a fresh GitHub repo.
-3. Import into Vercel. Framework auto-detects Next.js. No env vars needed.
-4. Add your custom domain in Vercel → Domains. Update DNS at Cloudflare/Namecheap.
-5. Production URL: `https://[YOUR_DOMAIN]`.
+Optional deeper DNS notes: [../01-portfolio-site/DEPLOY.md](../01-portfolio-site/DEPLOY.md).
 
-Build time: ~30 seconds. Cold load: ~107 kB JS, ~12.6 kB per route. Already optimized.
+Build time: ~30 seconds on Vercel. No env vars required for v1; after you connect a custom domain, add `NEXT_PUBLIC_SITE_URL` per DEPLOY-NEXT-STEPS.
 
 ## What's NOT here yet (intentionally)
 
