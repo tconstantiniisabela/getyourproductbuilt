@@ -1,12 +1,19 @@
+import { NorthtraceMark } from "@/components/logo";
 import { site } from "@/lib/site";
 
 export function Footer() {
   return (
     <footer className="border-t border-border">
       <div className="container flex flex-col items-start justify-between gap-6 py-10 text-sm text-muted-foreground sm:flex-row sm:items-center">
-        <div>
-          © {new Date().getFullYear()} {site.companyName}. Production deployments on
-          enterprise-grade edge infrastructure.
+        <div className="flex max-w-xl items-start gap-3">
+          <NorthtraceMark
+            className="mt-0.5 h-6 w-6 shrink-0 opacity-90"
+            aria-hidden
+          />
+          <div>
+            © {new Date().getFullYear()} {site.companyName}. Production deployments on
+            enterprise-grade edge infrastructure.
+          </div>
         </div>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
           <a

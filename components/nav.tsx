@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
 import { site } from "@/lib/site";
 
 export function Nav() {
@@ -8,9 +9,9 @@ export function Nav() {
       <div className="container flex h-16 items-center justify-between">
         <Link
           href="/"
-          className="text-sm font-semibold tracking-tight hover:text-primary transition-colors"
+          className="rounded-md transition-opacity hover:opacity-85 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
-          {site.companyShort}
+          <Logo />
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
           <Link

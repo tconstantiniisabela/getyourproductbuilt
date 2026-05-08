@@ -1,14 +1,16 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
 import { site } from "@/lib/site";
 
 export function Hero() {
   return (
     <section className="container flex min-h-[calc(100vh-4rem)] flex-col justify-center py-24">
       <div className="max-w-3xl">
-        <p className="text-sm font-medium uppercase tracking-wider text-primary">
-          {site.companyShort} · Custom AI tools &amp; automation for companies
+        <Logo className="[&_[data-mark]]:h-11 [&_[data-mark]]:w-11 sm:[&_[data-mark]]:h-12 sm:[&_[data-mark]]:w-12" />
+        <p className="mt-5 text-sm font-medium uppercase tracking-wider text-primary">
+          Custom AI tools &amp; automation for companies
         </p>
         <h1 className="mt-4 text-balance text-4xl font-semibold leading-[1.08] tracking-tight md:text-5xl lg:text-[3.25rem] lg:leading-[1.06]">
           The project stuck on everyone&apos;s list?{" "}

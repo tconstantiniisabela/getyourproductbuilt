@@ -53,6 +53,11 @@ The whole site is wired through one file: `lib/site.ts`. Open it and replace eve
 
 Marketing copy lives in `components/`; tune voice there if you rebrand.
 
+### Logo (your PNG)
+
+1. Replace `public/northtrace-mark.png` with your square artwork (keep the filename).  
+2. Run `npm run process-logo` — regenerates `northtrace-mark-white.png`, `northtrace-mark-dark.png`, and `app/icon.png`. The script drops the black canvas to transparency, applies a light stroke thickening, and builds theme-aware marks.
+
 ## Edit content
 
 - **Hero copy** → `components/hero.tsx`
