@@ -8,63 +8,73 @@ export function Hero() {
     <section className="container flex min-h-[calc(100vh-4rem)] flex-col justify-center py-24">
       <div className="max-w-3xl">
         <p className="text-sm font-medium uppercase tracking-wider text-primary">
-          Product builds for solo SaaS founders
+          Intelligent automation for teams that outgrew their backlog
         </p>
         <h1 className="mt-4 text-balance text-4xl font-semibold leading-[1.08] tracking-tight md:text-5xl lg:text-[3.25rem] lg:leading-[1.06]">
-          One scoped build. Seven days.{" "}
-          <span className="text-muted-foreground">Shipped with receipts.</span>
+          The capability gap isn&apos;t ambition—it&apos;s bandwidth.{" "}
+          <span className="text-muted-foreground">
+            Close it without another hiring cycle.
+          </span>
         </h1>
         <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          Turn the internal tool, workflow, or MVP you keep postponing into a
-          production-ready release—with daily visibility, one invoice, and no
-          scope creep. Remote-first; calendar aligned with US and EU teams.
+          Product and ops leaders bring me initiatives that stall behind roadmap
+          politics—customer-facing workflows, internal orchestration layers, and
+          inference-backed tooling that reads complicated on paper but ships like a
+          productized sprint. Fixed structure. Written scope. No six-month vendor
+          courtship. Remote execution with US and EU overlap baked in.
         </p>
         <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
           <Button asChild size="lg">
             <a href={site.calcomUrl}>
-              Book a 15‑minute intro
+              Reserve a strategy slot
               <ArrowRight className="h-4 w-4" />
             </a>
           </Button>
           <Link
+            href="#pricing"
+            className="text-sm font-medium text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+          >
+            View engagement tiers
+          </Link>
+          <Link
             href="#work"
             className="text-sm font-medium text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
           >
-            View selected work
+            Selected outcomes
           </Link>
         </div>
         <dl className="mt-14 grid gap-6 border-t border-border pt-10 sm:grid-cols-3">
           <div>
             <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-              Fixed fee
+              Structure
             </dt>
-            <dd className="mt-1 text-lg font-semibold tabular-nums text-foreground">
-              $1,500
+            <dd className="mt-1 text-lg font-semibold text-foreground">
+              Tiered engagements
             </dd>
             <dd className="mt-1 text-sm text-muted-foreground">
-              50% to start · 50% on delivery
+              From discovery-ready prototypes to multi-system builds—priced before work begins.
             </dd>
           </div>
           <div>
             <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-              Delivery window
+              Velocity
             </dt>
             <dd className="mt-1 text-lg font-semibold text-foreground">
-              7 calendar days
+              Compressed cycles
             </dd>
             <dd className="mt-1 text-sm text-muted-foreground">
-              Clear brief · daily Loom updates
+              Cadence built for stakeholders who measure quarters in shipped milestones—not slides.
             </dd>
           </div>
           <div>
             <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-              Availability
+              Coverage
             </dt>
             <dd className="mt-1 text-lg font-semibold text-foreground">
-              US &amp; EU hours
+              US · EU overlap
             </dd>
             <dd className="mt-1 text-sm text-muted-foreground">
-              Same‑day replies during agreed windows
+              Standing checkpoints during agreed business windows—no guessing where your lead is.
             </dd>
           </div>
         </dl>
@@ -73,10 +83,10 @@ export function Hero() {
             href={site.xUrl}
             className="font-medium text-foreground underline-offset-4 hover:underline"
           >
-            Build log on X
+            Delivery chronicle on X
           </a>
           <span className="mx-2 text-border">·</span>
-          No retainers · Your repo · Your keys
+          Your infrastructure · Your repositories · Your keys
         </p>
       </div>
     </section>

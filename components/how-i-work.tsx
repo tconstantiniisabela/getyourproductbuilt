@@ -2,33 +2,33 @@ import { site } from "@/lib/site";
 
 const points = [
   {
-    title: "Pricing matches the promise.",
+    title: "The quote matches what ships.",
     body:
-      "$1,500 covers the agreed scope. Underestimating effort is on me—scope changes only happen when we both sign off on them in writing.",
+      "Underestimating complexity is my liability—not yours. Scope changes happen only when leadership signs off in writing. That is how grown-up procurement runs.",
   },
   {
-    title: "Calendar overlap where it matters.",
+    title: "Timezone discipline without theatrics.",
     body:
-      "I work remote-first and schedule overlap with US East Coast and EU business hours. On kickoff we lock explicit windows for reviews and async turnaround expectations.",
+      "Remote-first execution with deliberate overlap across US and EU business windows. Kickoff locks explicit review cadences so nobody waits on ambiguous async silence.",
   },
   {
-    title: "You keep the asset.",
+    title: "You inherit the asset—not a black box.",
     body:
-      "Code lands in your repo, credentials stay in your accounts, and deliverables don’t depend on a proprietary layer you can’t migrate away from.",
+      "Deliverables land in your repos and environments. No mandatory middleware you cannot sunset. Your internal platform team—or your next partner—can extend without archaeology.",
   },
   {
-    title: "Honest scoping beats heroic promises.",
+    title: "Underpromise on calendars; overcommunicate on risk.",
     body:
-      "If the idea needs more than a week—or isn’t a fit—I’ll say so early and point you to a better option rather than absorb scope silently.",
+      "If an initiative deserves more runway than the tier suggests, you hear it before signatures—not after deposits clear.",
   },
   {
-    title: "Engagements end cleanly.",
+    title: "Engagements terminate cleanly.",
     body:
-      "Default model is fixed builds, not open retainers. When there’s another milestone worth shipping, we book it deliberately.",
+      "This is structured acceleration, not disguised staff augmentation. When the milestone lands, governance stays yours.",
   },
   {
-    title: "Process is visible.",
-    body: `Follow progress on X (${site.xHandle})—real screenshots, trade-offs, and shipped increments—not polished vapor.`,
+    title: "Receipts in public.",
+    body: `Technical narrative and delivery artifacts surface on X (${site.xHandle})—substance over polish.`,
   },
 ];
 
@@ -44,11 +44,10 @@ export function HowIWork() {
             Operating principles
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-            How we work together
+            How engagements run when reputations are on the line
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Six commitments before you book time—so expectations stay aligned
-            from intro call to handoff.
+            Six rules before we reserve calendar—because organizations your size do not reward ambiguity.
           </p>
         </div>
 

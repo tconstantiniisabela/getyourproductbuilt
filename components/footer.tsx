@@ -5,8 +5,7 @@ export function Footer() {
     <footer className="border-t border-border">
       <div className="container flex flex-col items-start justify-between gap-6 py-10 text-sm text-muted-foreground sm:flex-row sm:items-center">
         <div>
-          © {new Date().getFullYear()} {site.name}. Built with Cursor · Deployed on
-          Vercel.
+          © {new Date().getFullYear()} {site.name}. Production deployments on enterprise-grade edge infrastructure.
         </div>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
           <a

@@ -17,7 +17,7 @@ const mono = JetBrains_Mono({
 });
 
 const description =
-  "Ship one scoped AI tool or internal product in seven days—fixed scope, fixed price ($1,500). Built for solo SaaS founders who need clarity, speed, and zero retainers.";
+  "Fixed-structure intelligent automation engagements for scaling operators—tiered pricing from focused workflows to multi-system orchestration. Remote execution with US · EU overlap.";
 
 /** Canonical URL for OG/metadata: env overrides → Vercel preview URL → site.domain */
 function resolveMetadataBase(): URL | undefined {
@@ -48,22 +48,24 @@ function resolveMetadataBase(): URL | undefined {
   return undefined;
 }
 
+const titleDefault = `${site.name} — Intelligent automation, procurement-simple`;
+
 export const metadata: Metadata = {
   metadataBase: resolveMetadataBase(),
   title: {
-    default: `${site.name} — Ship your next AI build in 7 days`,
+    default: titleDefault,
     template: `%s · ${site.name}`,
   },
   description,
   openGraph: {
-    title: `${site.name} — Ship your next AI build in 7 days`,
+    title: titleDefault,
     description,
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — Ship your next AI build in 7 days`,
+    title: titleDefault,
     description,
   },
 };

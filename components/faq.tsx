@@ -7,36 +7,40 @@ import {
 
 const faqs = [
   {
-    q: "Why is pricing set at $1,500?",
-    a: "Because the scope is intentionally narrow: one shippable increment inside seven days. That discipline keeps assumptions explicit, protects both sides from scope creep, and lets me price from throughput—not inflated agency overhead.",
+    q: "Why three fixed tiers instead of hourly billing?",
+    a: "Hourly engagements reward drift. Fixed tiers force clarity up front—which is how internal sponsors defend budgets. Each bracket maps to an envelope we both recognize before engineering spends a cycle.",
   },
   {
-    q: "What happens if the deadline slips?",
-    a: "If we agreed on a delivery date and I miss it without a mutually approved scope change, you don’t owe the final 50%. If what ships isn’t usable or materially incomplete, we reconcile within seven days—either finish or refund the deposit.",
+    q: "Which tier do most organizations choose?",
+    a: "The $1,500 momentum sprint is the default when capability—not headcount—is the bottleneck and leadership wants one decisive milestone inside a tight reporting window. We validate tier fit live so you do not over-buy or under-scope.",
   },
   {
-    q: "Is everything here from paying clients?",
-    a: "These case studies are representative builds built to production standards; some anonymize metrics or combine patterns from multiple engagements. As paid references accumulate, this page will showcase named testimonials and recordings.",
+    q: "What happens if timelines slip?",
+    a: "Commercial terms tie remainder payments to acceptance checkpoints documented in your proposal. If delay originates from my execution without an approved scope amendment, remedies are spelled out before kickoff—no suspense.",
   },
   {
-    q: "Can I review code before committing?",
-    a: "During the intro call I’ll walk through comparable repos or snippets so you can judge structure and hygiene. Your specific build begins once the deposit clears—that commitment protects calendar time on both sides.",
+    q: "Are your case studies named enterprise references?",
+    a: "Representative deliveries shown here anonymize or composite metrics where NDAs apply. Named references become available as engagements authorize public attribution.",
   },
   {
-    q: "Where are you located?",
-    a: "Fully remote. I don’t publish a home base; what matters is predictable overlap with US and EU working hours and invoicing in USD via Stripe so finance stays simple.",
+    q: "Can engineering leadership audit artifacts before commitment?",
+    a: "Yes—intro calls include architectural walk-throughs of comparable codebases. Mobilization begins once procurement milestones you define are satisfied.",
   },
   {
-    q: "What stacks do you support?",
-    a: "Default path: Next.js (App Router), Tailwind, Postgres or Supabase, Vercel, Stripe, and OpenAI/Anthropic APIs. Comfortable adapting to React frontends with your existing API layer or FastAPI when ML integrations dominate.",
+    q: "Where are you physically located?",
+    a: "Fully remote with intentional overlap across US and EU business hours. Invoicing is USD via standardized rails so finance reconciliation stays frictionless.",
   },
   {
-    q: "Do you take retainers?",
-    a: "Most founders book sequential fixed builds. If ongoing capacity makes sense after the first delivery, we can discuss a limited-hours retainer with a three-month minimum.",
+    q: "What stacks and compliance postures do you support?",
+    a: "Primary delivery surfaces on modern web stacks—Next.js-class frameworks, managed Postgres, enterprise API gateways, and inference endpoints from tier-one model providers. Sensitive workloads route through your VPC boundaries and secrets managers.",
   },
   {
-    q: "Will you sign legal paperwork?",
-    a: "Mutual NDAs are fine. I won’t sign blanket exclusivity or non-competes that block helping adjacent founders.",
+    q: "Do you operate as an embedded team?",
+    a: "Structured accelerations first. If sequential mandates justify retained capacity after delivery, we scope a bounded continuation—not an open-ended bench.",
+  },
+  {
+    q: "Legal frameworks?",
+    a: "Mutual NDAs standard. Blanket exclusivity or non-competes that block adjacent sectors are non-starters.",
   },
 ];
 

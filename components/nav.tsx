@@ -14,6 +14,12 @@ export function Nav() {
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
           <Link
+            href="#pricing"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Pricing
+          </Link>
+          <Link
             href="#work"
             className="text-muted-foreground transition-colors hover:text-foreground"
           >

@@ -139,9 +139,9 @@ export default function CaseStudyPage({ params }: { params: Params }) {
 
           <div className="mt-16 flex flex-col items-start gap-4 border-t border-border pt-12 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <div className="font-semibold">Similar initiative on your roadmap?</div>
+              <div className="font-semibold">Comparable mandate internally?</div>
               <div className="text-sm text-muted-foreground">
-                Same seven-day engagement model and fixed fee structure.
+                Tiered engagements plus bespoke programs—scoped on a single working session.
               </div>
             </div>
             <Button asChild>

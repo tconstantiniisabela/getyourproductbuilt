@@ -5,24 +5,24 @@ import { Card } from "@/components/ui/card";
 export const projects = [
   {
     slug: "inbox-triage",
-    title: "Support inbox triage for a solo Shopify analytics founder",
+    title: "Enterprise-grade support triage for high-volume commerce analytics",
     summary:
-      "From ~2 hours daily on repetitive tickets to ~15 minutes—with routing, drafts, and Slack escalations tuned to one voice.",
-    tags: ["Next.js", "Claude", "Slack", "5 days"],
+      "Reduced manual tier-one handling by routing repetitive inquiries through structured classification—with human-approved drafts and escalation paths ops trusts.",
+    tags: ["Next.js", "LLM orchestration", "Slack", "5-day cycle"],
   },
   {
     slug: "lead-qualifier",
-    title: "Outbound enrichment for B2B mid-market sales",
+    title: "Outbound enrichment pipeline for B2B revenue teams",
     summary:
-      "Replaced a brittle multi-tool stack with a pipeline that lifted replies and doubled qualified meetings—without bloating monthly SaaS spend.",
-    tags: ["Next.js", "Claude", "GPT-4o", "6 days"],
+      "Consolidated brittle SaaS glue code into a controlled enrichment workflow—lifting reply quality without multiplying vendor contracts.",
+    tags: ["Next.js", "Inference APIs", "CRM exports", "6-day cycle"],
   },
   {
     slug: "weekly-report",
-    title: "Weekly client reporting for a solo agency",
+    title: "Executive reporting automation for multi-account services firms",
     summary:
-      "Automated Sunday reporting across Stripe, PostHog, and Linear—turning hours of dashboards into client-ready narratives.",
-    tags: ["Next.js", "Stripe", "PostHog", "4 days"],
+      "Unified billing, product analytics, and delivery telemetry into Monday-ready stakeholder narratives—eliminating Sunday reconciliation drag.",
+    tags: ["Next.js", "Stripe", "PostHog", "4-day cycle"],
   },
 ];
 
@@ -32,15 +32,13 @@ export function WorkGrid() {
       <div className="container py-24">
         <div className="max-w-3xl">
           <p className="text-sm font-medium uppercase tracking-wider text-primary">
-            Evidence, not promises
+            Instrumented deliveries
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-            Selected work
+            Representative outcomes
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Three representative builds—each delivered inside a week-long sprint.
-            Open a project for architecture notes, stack choices, and what
-            changed after launch.
+            Illustrative programs executed inside compressed delivery cycles—the kind of builds leadership green-lights when external credibility matters as much as internal throughput.
           </p>
         </div>
 

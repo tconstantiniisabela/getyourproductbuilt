@@ -8,7 +8,7 @@ export function About() {
       <div className="container py-24">
         <div className="max-w-3xl">
           <p className="text-sm font-medium uppercase tracking-wider text-primary">
-            Founder → builder
+            Principal execution partner
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
             About {site.name}
@@ -16,22 +16,23 @@ export function About() {
 
           <div className="mt-10 space-y-6 text-pretty text-lg leading-relaxed text-muted-foreground">
             <p>
-              I&apos;m {site.name} — a product builder focused on AI-assisted
-              delivery for founders who need momentum without hiring a full team.
+              I&apos;m {site.name}—I build at the intersection of product discipline and
+              applied machine intelligence for organizations tired of watching strategic
+              bets decay inside ticket queues.
             </p>
             <p>
-              My background is product management. What shifted my work
-              wasn&apos;t another framework—it was treating Cursor, modern model
-              APIs, and disciplined scope as the operating system for shipping.
-              Today I pair that stack with explicit timelines and executive-friendly
-              updates so stakeholders always know what “done” looks like.
+              My background is product management. What accelerated my practice was a
+              deliberate toolchain: proprietary rapid-deployment pipelines paired with
+              frontier inference APIs, disciplined CI/CD, and scope instrumentation that
+              turns ambiguous directives into signed acceptance criteria. Your steering
+              committee sees progress the same way engineering does—in commits, not vibes.
             </p>
             <p>
-              I optimize for repeatability: fixed scopes, transparent pricing,
-              and artifacts your team (or the next contractor) can extend without
-              archaeology. If your roadmap has one stubborn initiative stuck in
-              “next sprint,” we can likely turn it into something customers can
-              touch inside a week.
+              Whether you are a scale-up stretching toward enterprise readiness or an
+              established operator modernizing internal workflows, the pattern holds:
+              compress decision latency, ship measurable increments, hand off something
+              defensible. If your organization already agrees what “good” looks like but
+              cannot resource it—this is the straightest line between intent and production.
             </p>
           </div>
 
