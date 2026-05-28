@@ -115,9 +115,19 @@ Needed only if you want **calendar nudges** before posting or **Gmail drafts** f
 1. [Google Cloud Console](https://console.cloud.google.com/) → create/select a project.
 2. Enable **Google Calendar API** and **Gmail API** (APIs & Services → Library).
 
-### C2 — OAuth consent
+### C2 — OAuth consent (must be External for personal Gmail)
 
-APIs & Services → **OAuth consent screen** → External (typical) → while status is **Testing**, add your Gmail under **Test users**.
+APIs & Services → **OAuth consent screen**.
+
+**User type must be External** — not Internal. Internal only allows Google Workspace accounts in your organization; personal Gmail (e.g. `@gmail.com`) gets **`403: org_internal`**.
+
+1. Click **Edit app** (or **Make external** if offered).
+2. Set **User type** to **External**.
+3. Fill app name (e.g. AxisForge Labs), support email, developer contact → Save.
+4. While **Publishing status** is **Testing**, open **Test users** → **+ Add users** → add the Gmail you will sign in with (must match the account used on Connect Google).
+5. Save.
+
+If Google will not let you switch Internal → External on this project, create a **new** Google Cloud project, choose **External** from the start, and put the new Client ID/Secret in `.env.local`.
 
 ### C3 — OAuth client (Web)
 
@@ -149,7 +159,18 @@ Restart **`npm run dev`**.
 1. Open **`YOUR_BASE_URL/tools/marketing`** (logged in).
 2. Click **Connect Google Calendar + Gmail** and finish consent.
 
-If you see **redirect_uri_mismatch**, the redirect URI in Google Console and **`NEXT_PUBLIC_SITE_URL`** (including port) do not match — fix them to be the same origin.
+If you see **redirect_uri_mismatch**, the redirect URI in Google Console and **`NEXT_PUBLIC_SITE_URL`** (including port) do not match — fix them to be the same origin. Restart **`npm run dev`** after any `.env.local` change.
+
+**Client ID must match:** the OAuth client where you added the redirect URI must be the same Client ID in `.env.local`. If they differ, update `.env.local` or add the URI to the correct client.
+
+### C5 — Google OAuth troubleshooting
+
+| Google error | Fix |
+|--------------|-----|
+| **`403: org_internal`** | OAuth consent screen is **Internal**. Change to **External** (C2) and add your Gmail as a **Test user**. |
+| **`access_denied`** | Gmail not listed under **Test users**, or you signed in with a different Google account. |
+| **`redirect_uri_mismatch`** | Add exact `{NEXT_PUBLIC_SITE_URL}/api/marketing/google/callback` to **Authorized redirect URIs** on the OAuth client that matches `.env.local`. |
+| Old Client ID in OAuth request | Restart **`npm run dev`** after editing `.env.local`. |
 
 ---
 

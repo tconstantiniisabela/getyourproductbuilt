@@ -4,6 +4,7 @@ import { Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { googleOAuthErrorMessage } from "@/lib/google-oauth-errors";
 import { safeMarketingRedirect } from "@/lib/safe-redirect";
 
 function LoginForm() {
@@ -13,6 +14,7 @@ function LoginForm() {
   const searchParams = useSearchParams();
   const next = safeMarketingRedirect(searchParams.get("next"));
   const googleError = searchParams.get("googleError");
+  const googleErrorHint = googleOAuthErrorMessage(googleError);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -41,10 +43,11 @@ function LoginForm() {
           <code className="rounded bg-muted px-1 py-0.5 text-xs">MARKETING_DASHBOARD_SECRET</code>.
         </p>
       </div>
-      {googleError ? (
-        <p className="rounded-md border border-destructive/40 bg-destructive/10 px-4 py-3 text-sm text-destructive">
-          Google connection failed ({googleError}). Try again from the dashboard.
-        </p>
+      {googleErrorHint ? (
+        <div className="rounded-md border border-destructive/40 bg-destructive/10 px-4 py-3 text-sm text-destructive">
+          <p className="font-medium">Google connection failed</p>
+          <p className="mt-2 leading-relaxed">{googleErrorHint}</p>
+        </div>
       ) : null}
       <form className="flex flex-col gap-4" onSubmit={submit}>
         <label className="flex flex-col gap-2 text-sm font-medium">
