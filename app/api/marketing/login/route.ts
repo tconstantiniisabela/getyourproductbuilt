@@ -1,10 +1,24 @@
 import { NextResponse } from "next/server";
-import { marketingCookieName, signMarketingSession } from "@/lib/marketing-auth";
+import { marketingCookieName, signMarketingSession, verifyMarketingPassword } from "@/lib/marketing-auth";
+import { rateLimit } from "@/lib/rate-limit";
+
+function clientKey(req: Request): string {
+  const forwarded = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
+  return forwarded || "unknown";
+}
 
 export async function POST(req: Request) {
   const secret = process.env.MARKETING_DASHBOARD_SECRET?.trim();
   if (!secret) {
     return NextResponse.json({ error: "Not configured" }, { status: 503 });
+  }
+
+  const limit = rateLimit(`marketing-login:${clientKey(req)}`, { limit: 8, windowMs: 60_000 });
+  if (!limit.ok) {
+    return NextResponse.json(
+      { error: "Too many attempts. Try again shortly." },
+      { status: 429, headers: { "Retry-After": String(limit.retryAfterSec) } },
+    );
   }
 
   let body: { password?: string };
@@ -14,7 +28,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  if (!body.password || body.password !== secret) {
+  if (!verifyMarketingPassword(body.password, secret)) {
     return NextResponse.json({ error: "Invalid password" }, { status: 401 });
   }
 

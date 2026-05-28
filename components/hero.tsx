@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ExternalLink } from "@/components/external-link";
 import { Logo } from "@/components/logo";
 import { site } from "@/lib/site";
 
@@ -19,20 +20,17 @@ export function Hero() {
           </span>
         </h1>
         <p className="mt-6 max-w-3xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          You describe what needs to exist—smarter customer-support workflows,
-          automatic weekly reports pulled from tools you already use, or a web app
-          that connects your stack end to end. Our team designs it, builds it, and
-          hands it over with a recorded walkthrough. You keep the code, accounts,
-          and keys. Packages are priced before engineering starts so finance sees a
-          real number up front. Structured updates throughout so stakeholders stay
-          aligned.
+          You describe what needs to exist—support triage with human-approved drafts, weekly reports
+          pulled from tools you already use, or a web app that connects your stack end to end. We design
+          it, build it, and hand it over with a recorded walkthrough. You keep the code, accounts, and
+          keys. Price is fixed before engineering starts. Progress updates keep stakeholders aligned.
         </p>
         <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
           <Button asChild size="lg">
-            <a href={site.calcomUrl}>
-              Book a free intro call
+            <ExternalLink href={site.calcomUrl}>
+              {site.ctaLabel}
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </ExternalLink>
           </Button>
           <Link
             href="#pricing"
@@ -56,7 +54,7 @@ export function Hero() {
               Agreed upfront
             </dd>
             <dd className="mt-1 text-sm text-muted-foreground">
-              Packages scoped to job size—no surprise invoices after kickoff.
+              Three packages scoped to job size—no surprise invoices after kickoff.
             </dd>
           </div>
           <div>
@@ -64,10 +62,10 @@ export function Hero() {
               Timeline
             </dt>
             <dd className="mt-1 text-lg font-semibold text-foreground">
-              Short sprints
+              Days to weeks
             </dd>
             <dd className="mt-1 text-sm text-muted-foreground">
-              Delivered in days or weeks—not quarters—with checkpoints your team can plan around.
+              Short sprints with checkpoints your team can plan around—not quarter-long runways.
             </dd>
           </div>
           <div>
@@ -83,14 +81,14 @@ export function Hero() {
           </div>
         </dl>
         <p className="mt-8 text-sm text-muted-foreground">
-          <a
+          <ExternalLink
             href={site.xUrl}
             className="font-medium text-foreground underline-offset-4 hover:underline"
           >
             Delivery notes on X
-          </a>
+          </ExternalLink>
           <span className="mx-2 text-border">·</span>
-          Deployed inside your systems—you retain ownership end to end
+          Deployed in your systems—you retain ownership end to end
         </p>
       </div>
     </section>

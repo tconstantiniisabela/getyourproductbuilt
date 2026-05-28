@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { ExternalLink } from "@/components/external-link";
 import { site } from "@/lib/site";
 
 const tiers = [
@@ -11,8 +12,8 @@ const tiers = [
       "Perfect when you have one clear job—one automation, one connection between tools, or a simple internal tool.",
     justify: [
       "Small scope, fast turnaround; easy for one decision-maker to say yes.",
-      "Low risk way to prove the idea works before spending more.",
-      "Still includes written scope, delivery, and handoff—you’re not buying a vague “consulting hour.”",
+      "Low-risk way to prove the idea works before spending more.",
+      "Still includes written scope, delivery, and handoff—you're not buying vague consulting hours.",
     ],
   },
   {
@@ -23,8 +24,8 @@ const tiers = [
       "What most teams pick when the work is real software people will use—not a slide deck—but still bounded enough to ship on schedule.",
     justify: [
       "Usually one main screen or workflow plus a few integrations (e.g. email, Slack, your database).",
-      "You get regular updates during the build so leadership isn’t guessing.",
-      "If the wish list grows, we split Phase 2 into its own quote instead of hiding extra cost.",
+      "Regular updates during the build so leadership isn't guessing.",
+      "If the wish list grows, Phase 2 gets its own quote instead of hidden extra cost.",
     ],
   },
   {
@@ -33,7 +34,7 @@ const tiers = [
     pitch:
       "When several systems need to talk to each other, humans must approve steps along the way, or the logic behind the scenes is heavier.",
     justify: [
-      "Room for multiple integrations, review checkpoints, and more sophisticated AI where it adds value.",
+      "Room for multiple integrations, review checkpoints, and AI where it adds real value.",
       "Documentation your own tech team can pick up—or hand off cleanly to another vendor later.",
       "Worth it when waiting another quarter costs more than moving now.",
     ],
@@ -41,15 +42,15 @@ const tiers = [
 ];
 
 const included = [
-  "Written scope and “definition of done” before you pay the deposit",
+  "Written scope and definition of done before you pay the deposit",
   "Working software delivered into your accounts—hosted where you want it",
   "Plain-English progress updates during the build",
-  "Recorded walkthrough when it’s finished so your team knows how to use it",
+  "Recorded walkthrough when it's finished so your team knows how to use it",
   "Short bug-fix window after launch (exact length spelled out in your proposal)",
 ];
 
 const notIncluded = [
-  "Open-ended “keep adding features forever” retainers",
+  "Open-ended keep adding features forever retainers",
   "Full rebrand or pixel-perfect design from scratch",
   "Scope creep after we freeze the plan—changes become a new quote",
   "Native iPhone/Android apps (web-based delivery)",
@@ -74,12 +75,12 @@ export function Offer() {
             Three fixed packages—and a custom option when you need it
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Organizations engage {site.companyShort} for a{" "}
+            You get a{" "}
             <span className="font-medium text-foreground">
               finished piece of work
             </span>{" "}
             at a price fixed before engineering starts—not an open-ended hourly tab or a six-month agency runway.
-            Each package matches a different size of problem; if you&apos;re unsure which fits, the intro call sorts it in minutes.
+            Pick the size of the problem; if you&apos;re unsure, the intro call sorts it in fifteen minutes.
           </p>
         </div>
 
@@ -114,8 +115,14 @@ export function Offer() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-8 border-t border-border pt-6 text-xs text-muted-foreground">
-                Standard commercial terms: deposit at kickoff, remainder tied to acceptance milestones—exact split confirmed in your proposal.
+              <Button asChild className="mt-8 w-full">
+                <ExternalLink href={site.calcomUrl}>
+                  {site.ctaLabel}
+                  <ArrowRight className="h-4 w-4" />
+                </ExternalLink>
+              </Button>
+              <p className="mt-4 text-xs text-muted-foreground">
+                Deposit at kickoff; remainder tied to acceptance milestones—exact split in your proposal.
               </p>
             </Card>
           ))}
@@ -130,15 +137,16 @@ export function Offer() {
               Need something larger or more tailored?
             </h3>
             <p className="mt-3 text-pretty text-muted-foreground leading-relaxed">
-              Some projects—tough legacy systems, strict compliance rules, or a roadmap spanning several milestones—don’t fit a standard box.
-              Book a scoping call: we map the work in plain language, quote it as one clear project or phased phases you can share internally, and only start once everyone agrees.
+              Legacy systems, compliance rules, or a multi-milestone roadmap may not fit a standard box.
+              Book a scoping call: we map the work in plain language, quote it as one project or phased milestones,
+              and only start once everyone agrees.
             </p>
           </div>
           <Button asChild size="lg" className="mt-8 shrink-0 lg:mt-0">
-            <a href={site.calcomUrl}>
+            <ExternalLink href={site.calcomUrl}>
               Talk through a custom quote
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </ExternalLink>
           </Button>
         </Card>
 

@@ -7,23 +7,23 @@ import { Card } from "@/components/ui/card";
 export const projects = [
   {
     slug: "inbox-triage",
-    title: "Enterprise-grade support triage for high-volume commerce analytics",
+    title: "Support inbox triage with human-approved drafts",
     summary:
-      "Reduced manual tier-one handling by routing repetitive inquiries through structured classification—with human-approved drafts and escalation paths that operations teams trust.",
+      "Routed repetitive support mail through classification and draft replies—ops kept control with approval before anything sent.",
     tags: ["Next.js", "LLM orchestration", "Slack", "5-day cycle"],
   },
   {
     slug: "lead-qualifier",
-    title: "Outbound enrichment pipeline for B2B revenue teams",
+    title: "Outbound enrichment for B2B revenue teams",
     summary:
-      "Consolidated brittle SaaS glue code into a controlled enrichment workflow—lifting reply quality without multiplying vendor contracts.",
+      "Replaced brittle SaaS glue with one controlled enrichment workflow—better reply quality without stacking vendor contracts.",
     tags: ["Next.js", "Inference APIs", "CRM exports", "6-day cycle"],
   },
   {
     slug: "weekly-report",
-    title: "Executive reporting automation for multi-account services firms",
+    title: "Executive reporting automation for services firms",
     summary:
-      "Unified billing, product analytics, and delivery telemetry into Monday-ready stakeholder narratives—eliminating Sunday reconciliation drag.",
+      "Pulled billing, product analytics, and delivery data into Monday-ready stakeholder updates—no more Sunday reconciliation.",
     tags: ["Next.js", "Stripe", "PostHog", "4-day cycle"],
   },
 ];
@@ -34,14 +34,14 @@ export function WorkGrid() {
       <div className="container py-24">
         <div className="max-w-3xl">
           <p className="text-sm font-medium uppercase tracking-wider text-primary">
-            Instrumented deliveries
+            Example deliveries
           </p>
           <h2 className="mt-3 flex flex-wrap items-center gap-3 text-3xl font-semibold tracking-tight md:text-4xl">
             <LogoMark className="h-11 max-h-12 shrink-0 md:h-12 md:max-h-14" aria-hidden />
             <span>Representative outcomes</span>
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Representative work from {site.companyShort}—delivered in short cycles that leadership can approve when external credibility matters as much as internal throughput.
+            Short-cycle builds from {site.companyShort}—anonymized or composite where NDAs apply. Named references when clients authorize.
           </p>
         </div>
 

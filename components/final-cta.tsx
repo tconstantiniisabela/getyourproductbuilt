@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ExternalLink } from "@/components/external-link";
 import { site } from "@/lib/site";
 
 export function FinalCta() {
@@ -8,22 +9,22 @@ export function FinalCta() {
       <div className="container py-24">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-medium uppercase tracking-wider text-primary">
-            Decision window
+            Next step
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-            You already know deferred roadmap work costs more than any package here.
+            Fifteen minutes to scope the work—and see if we&apos;re the right fit.
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Fifteen minutes separates another delayed initiative from a scoped engagement
-            your CFO can defend. If {site.companyShort} is not the right lane, you leave
-            with architecture guidance—not an automated nurture sequence.
+            On the intro call we confirm fit, map your work to a package, and outline next steps.
+            If {site.companyShort} isn&apos;t the right lane, you leave with useful architecture
+            guidance—not an automated nurture sequence.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4">
             <Button asChild size="lg">
-              <a href={site.calcomUrl}>
-                Hold time with our team
+              <ExternalLink href={site.calcomUrl}>
+                {site.ctaLabel}
                 <ArrowRight className="h-4 w-4" />
-              </a>
+              </ExternalLink>
             </Button>
             <p className="text-sm text-muted-foreground">
               Procurement prefers email first?{" "}

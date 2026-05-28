@@ -9,6 +9,21 @@ export function signMarketingSession(secret: string): string {
   return `${payload}.${sig}`;
 }
 
+/** Constant-time comparison for dashboard access phrase. */
+export function verifyMarketingPassword(
+  provided: string | undefined,
+  secret: string,
+): boolean {
+  if (!provided || !secret) return false;
+  const a = Buffer.from(provided);
+  const b = Buffer.from(secret);
+  if (a.length !== b.length) {
+    crypto.timingSafeEqual(a, a);
+    return false;
+  }
+  return crypto.timingSafeEqual(a, b);
+}
+
 export function verifyMarketingSession(token: string | undefined, secret: string): boolean {
   if (!token || !secret) return false;
   const i = token.lastIndexOf(".");

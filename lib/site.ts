@@ -18,6 +18,11 @@ export const site = {
   xUrl: "https://x.com/belaconstantinit",
   linkedinUrl: "https://www.linkedin.com/in/isabela-constantini-t/",
   calcomUrl: "https://cal.com/isabela-constantini-t-b5sqlt/15min",
+  /** Primary booking CTA — keep consistent across the site */
+  ctaLabel: "Book a free intro call",
+  /** Legal page last-updated stamps (ISO date) */
+  privacyUpdated: "2026-05-28",
+  termsUpdated: "2026-05-28",
   // Case study walkthroughs — paste real Loom share URLs when you have them
   loomInbox: "[YOUR_LOOM_URL_INBOX]",
   loomLeadQualifier: "[YOUR_LOOM_URL_LEAD_QUALIFIER]",

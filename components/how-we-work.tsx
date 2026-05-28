@@ -4,38 +4,38 @@ const points = [
   {
     title: "The proposal matches what we ship.",
     body:
-      "Underestimating complexity sits on our side—not yours. Scope expands only when leadership signs change orders in writing. That is how mature procurement stays predictable.",
+      "If we underestimate complexity, that sits on our side—not yours. Scope grows only when you sign a written change order.",
   },
   {
-    title: "Timezone discipline without theatrics.",
+    title: "Timezone overlap that actually works.",
     body:
-      "Remote-first pods with deliberate overlap across US and EU business windows. Kickoff locks review cadences so nobody waits on ambiguous silence.",
+      "Remote-first with deliberate overlap across US and EU business hours. Kickoff locks a review cadence so nobody waits on silence.",
   },
   {
     title: "You inherit the asset—not a black box.",
     body:
-      "Artifacts land in your repos and environments. No mandatory middleware you cannot sunset. Your internal platform team—or your next partner—extends without archaeology.",
+      "Code and configs land in your repos and accounts. Your team—or your next vendor—can extend the work without archaeology.",
   },
   {
     title: "Honest calendars before heroic promises.",
     body:
-      "If an initiative needs more runway than the tier allows, you hear it before signatures—not after deposits clear.",
+      "If the work needs more runway than the tier allows, you hear it before signatures—not after the deposit clears.",
   },
   {
-    title: "Engagements terminate cleanly.",
+    title: "Engagements end cleanly.",
     body:
-      "Structured acceleration—not disguised staff augmentation. When milestones land, governance stays yours.",
+      "Structured delivery—not disguised staff augmentation. When milestones land, governance stays yours.",
   },
   {
     title: "Receipts in public.",
-    body: `Delivery commentary and build artifacts surface on X (${site.xHandle})—substance over polish.`,
+    body: `Build notes and delivery commentary on X (@${site.xHandle})—substance over polish.`,
   },
 ];
 
-export function HowIWork() {
+export function HowWeWork() {
   return (
     <section
-      id="how-i-work"
+      id="how-we-work"
       className="border-t border-border bg-muted/30"
     >
       <div className="container py-24">
@@ -44,10 +44,10 @@ export function HowIWork() {
             Operating principles
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-            How {site.companyShort} runs engagements under scrutiny
+            How {site.companyShort} runs fixed-scope builds
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Six standards before we hold calendar—because enterprises do not reward ambiguity.
+            Six standards we hold before taking calendar—because unclear scope is how projects stall.
           </p>
         </div>
 

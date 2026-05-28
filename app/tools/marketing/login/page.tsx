@@ -4,13 +4,14 @@ import { Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { safeMarketingRedirect } from "@/lib/safe-redirect";
 
 function LoginForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
   const searchParams = useSearchParams();
-  const next = searchParams.get("next") || "/tools/marketing";
+  const next = safeMarketingRedirect(searchParams.get("next"));
   const googleError = searchParams.get("googleError");
 
   async function submit(e: React.FormEvent) {

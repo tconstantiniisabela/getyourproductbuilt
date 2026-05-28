@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
@@ -9,39 +10,43 @@ import { site } from "@/lib/site";
 const faqs = [
   {
     q: "Why fixed-price tiers instead of hourly?",
-    a: "Hourly engagements blur timelines and invoices. Fixed packages tell finance exactly what they are approving before build starts. Each tier reflects a realistic workload band—we validate fit on a short intro call.",
+    a: "Hourly engagements blur timelines and invoices. Fixed packages tell finance exactly what they're approving before build starts. We validate fit on a short intro call.",
   },
   {
-    q: "Which tier do most organizations choose?",
-    a: "The $1,500 Standard build package is the default when teams want usable software—not decks—with visible progress during delivery. Unsure? We map scope to the right bracket live.",
+    q: "Which tier do most teams choose?",
+    a: "The $1,500 Standard build is the default when you want usable software—not decks—with visible progress during delivery. Unsure? We map scope to the right bracket live on the call.",
   },
   {
     q: "What happens if timelines slip?",
-    a: "Remainder payments tie to acceptance checkpoints spelled out in your proposal. If delay originates on our side without an approved scope amendment, remedies are defined before kickoff—no ambiguity.",
+    a: "Final payments tie to acceptance checkpoints spelled out in your proposal. If delay is on our side without an approved scope change, remedies are defined before kickoff.",
   },
   {
-    q: "Are these case studies named enterprise references?",
-    a: "Representative deliveries anonymize or composite metrics where NDAs apply. Named references surface once clients authorize public attribution.",
+    q: "Are these case studies real client references?",
+    a: "Representative deliveries—anonymized or composite where NDAs apply. Named references when clients authorize public attribution.",
   },
   {
-    q: "Can engineering leadership audit artifacts before commitment?",
-    a: "Yes—intro calls include architectural reviews of comparable builds. Mobilization begins once procurement milestones on your side are satisfied.",
+    q: "Can our engineering team review the approach before we commit?",
+    a: "Yes. Intro calls include walkthroughs of comparable builds. We start once your internal procurement steps are satisfied.",
   },
   {
     q: `Where is ${site.companyShort} based?`,
-    a: "Fully remote with deliberate overlap across US and EU business hours. Invoicing runs in USD through standard corporate rails for simpler reconciliation.",
+    a: "Fully remote with overlap across US and EU business hours. Invoicing in USD through standard corporate payment rails.",
   },
   {
-    q: `What technologies does ${site.companyShort} support?`,
-    a: "Modern web platforms (including Next.js-class stacks), managed databases, enterprise API gateways, and inference endpoints from tier-one providers. Sensitive workloads remain inside your chosen boundaries and secrets tooling.",
+    q: `What technologies does ${site.companyShort} use?`,
+    a: "Modern web stacks (Next.js-class), managed databases, API integrations, and inference from tier-one providers. Sensitive workloads stay inside your chosen boundaries and secrets tooling.",
   },
   {
-    q: `Does ${site.companyShort} embed as staff augmentation?`,
-    a: "We lead structured accelerations first. If subsequent mandates justify retained capacity, we quote bounded continuation phases—not open-ended benches.",
+    q: "Do you embed as staff augmentation?",
+    a: "We lead structured fixed-scope builds first. If a follow-on phase makes sense, we quote it as a bounded continuation—not an open-ended bench.",
   },
   {
-    q: "Legal frameworks?",
-    a: "Mutual NDAs are standard. Blanket exclusivity or cross-sector non-competes are outside our policy.",
+    q: "Legal, privacy, and NDAs?",
+    a: `Mutual NDAs are standard before detailed scoping. See our Privacy Policy and Terms for site use. Blanket exclusivity or cross-sector non-competes are outside our policy.`,
+    links: [
+      { href: "/privacy", label: "Privacy Policy" },
+      { href: "/terms", label: "Terms of Service" },
+    ],
   },
 ];
 
@@ -60,11 +65,26 @@ export function Faq() {
           <Accordion type="single" collapsible className="mt-12">
             {faqs.map((item, i) => (
               <AccordionItem key={item.q} value={`item-${i}`}>
-                <AccordionTrigger className="text-base font-medium">
+                <AccordionTrigger className="text-left text-base font-medium">
                   {item.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-base">
+                <AccordionContent className="text-base leading-relaxed">
                   {item.a}
+                  {"links" in item && item.links ? (
+                    <span className="mt-3 block">
+                      {item.links.map((link, j) => (
+                        <span key={link.href}>
+                          {j > 0 ? " · " : null}
+                          <Link
+                            href={link.href}
+                            className="font-medium text-foreground underline-offset-4 hover:underline"
+                          >
+                            {link.label}
+                          </Link>
+                        </span>
+                      ))}
+                    </span>
+                  ) : null}
                 </AccordionContent>
               </AccordionItem>
             ))}

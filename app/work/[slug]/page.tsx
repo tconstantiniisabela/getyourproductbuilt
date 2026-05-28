@@ -6,8 +6,13 @@ import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { ExternalLink } from "@/components/external-link";
 import { caseStudies, getCaseStudy } from "@/lib/case-studies";
 import { site } from "@/lib/site";
+
+function hasWalkthrough(url: string): boolean {
+  return Boolean(url && !url.includes("[YOUR_LOOM"));
+}
 
 type Params = { slug: string };
 
@@ -35,7 +40,7 @@ export default function CaseStudyPage({ params }: { params: Params }) {
   return (
     <>
       <Nav />
-      <main className="container max-w-3xl py-16">
+      <main id="main-content" className="container max-w-3xl py-16">
         <Link
           href="/#work"
           className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
@@ -52,22 +57,28 @@ export default function CaseStudyPage({ params }: { params: Params }) {
             {study.oneLiner}
           </p>
 
-          <Card className="mt-12 flex flex-col items-start gap-4 border-dashed bg-muted/30 p-8 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-center gap-4">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <Play className="h-5 w-5" />
-              </span>
-              <div>
-                <div className="text-sm font-semibold">Product walkthrough</div>
-                <div className="text-sm text-muted-foreground">
-                  Screen recording of flows, UI, and integration touchpoints
+          {hasWalkthrough(study.loomUrl) ? (
+            <Card className="mt-12 flex flex-col items-start gap-4 border-dashed bg-muted/30 p-8 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex items-center gap-4">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Play className="h-5 w-5" />
+                </span>
+                <div>
+                  <div className="text-sm font-semibold">Product walkthrough</div>
+                  <div className="text-sm text-muted-foreground">
+                    Screen recording of flows, UI, and integration touchpoints
+                  </div>
                 </div>
               </div>
-            </div>
-            <Button asChild variant="outline">
-              <a href={study.loomUrl}>Watch recording</a>
-            </Button>
-          </Card>
+              <Button asChild variant="outline">
+                <ExternalLink href={study.loomUrl}>Watch recording</ExternalLink>
+              </Button>
+            </Card>
+          ) : (
+            <p className="mt-12 rounded-md border border-dashed border-border bg-muted/30 p-4 text-sm text-muted-foreground">
+              Walkthrough recording available on request during an intro call.
+            </p>
+          )}
 
           <Section title="Challenge">
             <p>{study.problem}</p>
@@ -145,10 +156,10 @@ export default function CaseStudyPage({ params }: { params: Params }) {
               </div>
             </div>
             <Button asChild>
-              <a href={site.calcomUrl}>
-                Book an intro
+              <ExternalLink href={site.calcomUrl}>
+                {site.ctaLabel}
                 <ArrowRight className="h-4 w-4" />
-              </a>
+              </ExternalLink>
             </Button>
           </div>
         </article>

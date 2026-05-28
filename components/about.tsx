@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ExternalLink } from "@/components/external-link";
 import { site } from "@/lib/site";
 
 export function About() {
@@ -16,31 +17,28 @@ export function About() {
 
           <div className="mt-10 space-y-6 text-pretty text-lg leading-relaxed text-muted-foreground">
             <p>
-              {site.companyShort} is a focused delivery studio: senior builders,
-              product strategists, and integration specialists who turn stalled roadmaps
-              into working software—without standing up another permanent engineering org.
+              {site.companyShort} is a focused delivery studio: builders and integration
+              specialists who turn stalled internal tools and automations into working
+              software—without standing up another permanent engineering org.
             </p>
             <p>
-              Our stack pairs disciplined scope governance with modern AI inference,
-              automated pipelines, and infrastructure patterns enterprises already trust.
-              Steering committees see the same evidence engineering does—demo-backed
-              checkpoints tied to written acceptance criteria—so procurement and delivery
-              stay in sync.
+              We pair disciplined scope governance with modern AI, automated pipelines, and
+              infrastructure patterns teams already trust. Checkpoints are demo-backed and tied
+              to written acceptance criteria—so procurement and engineering stay aligned.
             </p>
             <p>
-              Whether you are scaling toward enterprise rigor or modernizing internal
-              operations, we compress decision latency: scoped proposals first, delivery
-              second, clean handoff third. When internal bandwidth returns, your team can
-              extend what we ship—or engage us for the next milestone without ambiguity.
+              Scoped proposal first, delivery second, clean handoff third. When your bandwidth
+              returns, your team extends what we ship—or we quote the next milestone without
+              ambiguity.
             </p>
           </div>
 
           <div className="mt-10">
             <Button asChild size="lg">
-              <a href={site.calcomUrl}>
-                Schedule an intro with our team
+              <ExternalLink href={site.calcomUrl}>
+                {site.ctaLabel}
                 <ArrowRight className="h-4 w-4" />
-              </a>
+              </ExternalLink>
             </Button>
           </div>
         </div>

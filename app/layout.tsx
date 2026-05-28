@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { site } from "@/lib/site";
+import { site, siteOrigin } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -16,7 +16,7 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-const description = `${site.companyShort} builds fixed-price AI tools and automations for teams—three clear packages plus custom scoping. Fully remote with deliberate overlap across US and EU business hours.`;
+const description = `${site.companyShort} builds fixed-price AI tools and automations for teams—three clear packages plus custom scoping. Remote delivery with US and EU hours overlap.`;
 
 /** Canonical URL for OG/metadata: env overrides → Vercel preview URL → site.domain */
 function resolveMetadataBase(): URL | undefined {
@@ -81,9 +81,31 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: site.companyName,
+    url: siteOrigin(),
+    email: site.email,
+    description,
+    areaServed: ["US", "EU"],
+    priceRange: "$1000-$3000+",
+    sameAs: [site.linkedinUrl, site.xUrl],
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${mono.variable} font-sans`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"
+        >
+          Skip to main content
+        </a>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
