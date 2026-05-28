@@ -30,6 +30,18 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2 border-t border-border pt-6">
+          <Link href="/offers/lead-qualifier" className="transition-colors hover:text-foreground">
+            Lead Qualifier offer
+          </Link>
+          <Link href="/offers/inbox-triage" className="transition-colors hover:text-foreground">
+            Inbox Triage offer
+          </Link>
+          <Link href="/offers/weekly-report" className="transition-colors hover:text-foreground">
+            Weekly Report offer
+          </Link>
+          <Link href="/tools/scope-estimator" className="transition-colors hover:text-foreground">
+            Scope estimator
+          </Link>
           <Link href="/privacy" className="transition-colors hover:text-foreground">
             Privacy
           </Link>

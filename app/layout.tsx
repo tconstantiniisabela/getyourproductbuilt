@@ -56,6 +56,11 @@ export const metadata: Metadata = {
     template: `%s · ${site.companyShort}`,
   },
   description,
+  alternates: {
+    types: {
+      "text/plain": [{ url: "/llms.txt", title: "LLM-readable site summary" }],
+    },
+  },
   openGraph: {
     title: titleDefault,
     description,

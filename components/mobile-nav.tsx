@@ -9,7 +9,9 @@ import { site } from "@/lib/site";
 
 const links = [
   { href: "#pricing", label: "Pricing" },
+  { href: "#offers", label: "Offers" },
   { href: "#work", label: "Selected work" },
+  { href: "/tools/scope-estimator", label: "Scope estimator" },
   { href: "#how-we-work", label: "How we work" },
   { href: "#about", label: "About" },
   { href: "#faq", label: "FAQ" },

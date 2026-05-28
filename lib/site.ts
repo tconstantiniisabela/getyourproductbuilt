@@ -17,16 +17,20 @@ export const site = {
   xHandle: "belaconstantinit",
   xUrl: "https://x.com/belaconstantinit",
   linkedinUrl: "https://www.linkedin.com/in/isabela-constantini-t/",
-  calcomUrl: "https://cal.com/bela-constantini-t/15min",
+  calcomUrl: "https://cal.com/isabela-constantini-t-b5sqlt/15min",
   /** Primary booking CTA — keep consistent across the site */
   ctaLabel: "Book a free intro call",
   /** Legal page last-updated stamps (ISO date) */
   privacyUpdated: "2026-05-28",
   termsUpdated: "2026-05-28",
-  // Case study walkthroughs — paste real Loom share URLs when you have them
-  loomInbox: "[YOUR_LOOM_URL_INBOX]",
-  loomLeadQualifier: "[YOUR_LOOM_URL_LEAD_QUALIFIER]",
-  loomWeeklyReport: "[YOUR_LOOM_URL_WEEKLY_REPORT]",
+  /** Q2 inbound campaign deadline */
+  q2Deadline: "June 30, 2026",
+  // Case study walkthroughs — set NEXT_PUBLIC_LOOM_* in .env.local or paste URLs here
+  loomInbox: process.env.NEXT_PUBLIC_LOOM_INBOX?.trim() || "[YOUR_LOOM_URL_INBOX]",
+  loomLeadQualifier:
+    process.env.NEXT_PUBLIC_LOOM_LEAD_QUALIFIER?.trim() || "[YOUR_LOOM_URL_LEAD_QUALIFIER]",
+  loomWeeklyReport:
+    process.env.NEXT_PUBLIC_LOOM_WEEKLY_REPORT?.trim() || "[YOUR_LOOM_URL_WEEKLY_REPORT]",
 } as const;
 
 /** Canonical site URL for outbound links (email, social drafts). Uses NEXT_PUBLIC_SITE_URL or SITE_URL when set. */

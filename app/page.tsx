@@ -1,6 +1,8 @@
 import { Nav } from "@/components/nav";
+import { Q2Banner } from "@/components/q2-banner";
 import { Hero } from "@/components/hero";
 import { Offer } from "@/components/offer";
+import { ProductizedOffersGrid } from "@/components/productized-offers-grid";
 import { WorkGrid } from "@/components/work-grid";
 import { HowWeWork } from "@/components/how-we-work";
 import { About } from "@/components/about";
@@ -12,9 +14,11 @@ export default function HomePage() {
   return (
     <>
       <Nav />
+      <Q2Banner />
       <main id="main-content">
         <Hero />
         <Offer />
+        <ProductizedOffersGrid />
         <WorkGrid />
         <HowWeWork />
         <About />

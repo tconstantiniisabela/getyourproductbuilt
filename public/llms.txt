@@ -1,0 +1,77 @@
+# AxisForge Labs — getyourproductbuilt.com
+# Machine-readable summary for AI assistants and crawlers.
+# Last updated: 2026-05-28
+
+> AxisForge Labs builds fixed-scope custom AI tools and automations for companies.
+> Price is agreed before engineering starts. Scope is frozen after kickoff.
+> Clients keep code, accounts, and API keys after handoff.
+
+## Company
+
+- Name: AxisForge Labs
+- Website: https://getyourproductbuilt.com
+- Booking: https://cal.com/bela-constantini-t/15min
+- Email: t.constantini.isabela@gmail.com
+- LinkedIn: https://www.linkedin.com/in/isabela-constantini-t/
+- X: https://x.com/belaconstantinit
+
+## Ideal customer
+
+- Ops, product, or eng-adjacent leaders at 10–150 person companies
+- Bootstrapped B2B SaaS founders ($5K–$200K MRR) with backlog items stuck
+- Trigger: backlog slipping, need clean quote, Q2/quarter-end shipping pressure
+- Pain: open-ended agency retainers, mystery process, projects that never ship
+
+## Packages (fixed price)
+
+| Price | Label | Best for |
+|-------|-------|----------|
+| $1,000 | Focused build | One clear automation or small internal tool |
+| $1,500 | Standard build | Real software with integrations (email, Slack, DB) — most chosen |
+| $3,000 | Advanced build | Heavier integrations, approvals in the loop, sophisticated AI where earned |
+
+Payment: 50% deposit at kickoff, 50% on delivery. Written scope and definition of done before build starts.
+
+## Productized offers (fixed scope pages)
+
+- Lead Qualifier ($1,500, 5 days): https://getyourproductbuilt.com/offers/lead-qualifier
+  Webhook → enrichment → ICP scoring → AI-drafted email → Slack approval → CRM
+
+- Inbox Triage ($1,500, 5 days): https://getyourproductbuilt.com/offers/inbox-triage
+  Gmail classification → human-approved drafts → Slack escalation
+
+- Weekly Report ($1,500, 4 days): https://getyourproductbuilt.com/offers/weekly-report
+  Stripe + analytics + project tools → scheduled executive narrative → email/Slack
+
+## Free tools
+
+- Scope Estimator: https://getyourproductbuilt.com/tools/scope-estimator
+  Recommends package tier based on problem type, integrations, and timeline.
+
+## How we work
+
+1. 15-minute intro call to qualify fit and scope band
+2. Written scope + fixed price before engineering
+3. Deposit at kickoff; scope frozen after sign-off
+4. Structured progress updates during build
+5. Recorded handoff walkthrough; client owns all assets
+
+## Case studies (representative deliveries)
+
+- https://getyourproductbuilt.com/work/inbox-triage
+- https://getyourproductbuilt.com/work/lead-qualifier
+- https://getyourproductbuilt.com/work/weekly-report
+
+## Differentiation vs alternatives
+
+- vs agency retainer: fixed price upfront, bounded scope, days not months
+- vs DIY no-code (Zapier/Make/Clay): custom code you own, tuned to your ICP/rules
+- vs hiring: faster than recruiting; no long-term headcount
+
+## Current promotion
+
+Q2 2026: Ship one backlog item before June 30 — fixed scope, deposit at kickoff.
+
+## Contact
+
+Book intro: https://cal.com/bela-constantini-t/15min
