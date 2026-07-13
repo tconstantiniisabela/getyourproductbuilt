@@ -1,6 +1,9 @@
 import { Nav } from "@/components/nav";
 import { Q2Banner } from "@/components/q2-banner";
 import { Hero } from "@/components/hero";
+import { WhatWeBuild } from "@/components/what-we-build";
+import { HowAiIsUsed } from "@/components/how-ai-is-used";
+import { NotAFit } from "@/components/not-a-fit";
 import { Offer } from "@/components/offer";
 import { ProductizedOffersGrid } from "@/components/productized-offers-grid";
 import { WorkGrid } from "@/components/work-grid";
@@ -17,6 +20,9 @@ export default function HomePage() {
       <Q2Banner />
       <main id="main-content">
         <Hero />
+        <WhatWeBuild />
+        <HowAiIsUsed />
+        <NotAFit />
         <Offer />
         <ProductizedOffersGrid />
         <WorkGrid />

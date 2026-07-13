@@ -21,11 +21,14 @@ const tiers = [
     label: "Standard build",
     badge: "Most chosen",
     pitch:
-      "What most teams pick when the work is real software people will use—not a slide deck—but still bounded enough to ship on schedule.",
+      "One AI-enabled workflow with clear boundaries—what most teams pick when the work is real software people will use, not a slide deck.",
     justify: [
-      "Usually one main screen or workflow plus a few integrations (e.g. email, Slack, your database).",
-      "Regular updates during the build so leadership isn't guessing.",
-      "If the wish list grows, Phase 2 gets its own quote instead of hidden extra cost.",
+      "One AI-enabled workflow",
+      "One or two integrations",
+      "One approval step",
+      "Written acceptance criteria",
+      "Recorded handoff",
+      "14-day bug-fix window",
     ],
   },
   {

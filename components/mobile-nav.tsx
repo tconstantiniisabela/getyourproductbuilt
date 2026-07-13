@@ -8,6 +8,7 @@ import { ExternalLink } from "@/components/external-link";
 import { site } from "@/lib/site";
 
 const links = [
+  { href: "#what-we-build", label: "What we build" },
   { href: "#pricing", label: "Pricing" },
   { href: "#offers", label: "Offers" },
   { href: "#work", label: "Selected work" },
