@@ -112,6 +112,12 @@ Google Cloud: OAuth consent + scopes **Calendar events** and **Gmail compose** (
 
 Robots: `tools/marketing` sets **noindex**. Keep `MARKETING_DASHBOARD_SECRET` long and secret.
 
+## Agent operations control plane
+
+Open **`/tools/marketing/operations`** after signing in to manage the shared operations queue: inbound and booking intake, scope/proposal drafts, kickoff, client-success triage, finance/capacity briefs, and QA packages.
+
+The control plane requires explicit approval for commercial, financial, legal, and production actions. It accepts normalized provider events through `POST /api/operations/events`, deduplicated by an idempotency key. Read [AGENT-OPERATIONS.md](./AGENT-OPERATIONS.md) before connecting Cal.com, Stripe, forms, or an automation relay.
+
 ## Marketing CLI (optional)
 
 Legacy terminal helpers (`npm run marketing`) remain for Markdown exports and Resend sends — same data directory `data/marketing/`.
