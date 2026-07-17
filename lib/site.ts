@@ -17,7 +17,7 @@ export const site = {
   xHandle: "belaconstantinit",
   xUrl: "https://x.com/belaconstantinit",
   linkedinUrl: "https://www.linkedin.com/in/isabela-constantini-t/",
-  calcomUrl: "https://cal.com/isabela-constantini-t-b5sqlt/15min",
+  calcomUrl: "https://cal.com/isabela-constantini-t/15min",
   /** Primary booking CTA — keep consistent across the site */
   ctaLabel: "Book a free intro call",
   /** Legal page last-updated stamps (ISO date) */
