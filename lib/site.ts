@@ -23,8 +23,6 @@ export const site = {
   /** Legal page last-updated stamps (ISO date) */
   privacyUpdated: "2026-05-28",
   termsUpdated: "2026-05-28",
-  /** Q2 inbound campaign deadline */
-  q2Deadline: "June 30, 2026",
   // Case study walkthroughs — set NEXT_PUBLIC_LOOM_* in .env.local or paste URLs here
   loomInbox: process.env.NEXT_PUBLIC_LOOM_INBOX?.trim() || "[YOUR_LOOM_URL_INBOX]",
   loomLeadQualifier:

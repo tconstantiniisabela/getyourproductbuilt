@@ -48,7 +48,7 @@ No pitch if it's not useful — just wanted you to have it in your back pocket.
   - Lead Qualifier: https://getyourproductbuilt.com/offers/lead-qualifier
   - Inbox Triage: https://getyourproductbuilt.com/offers/inbox-triage
   - Weekly Report: https://getyourproductbuilt.com/offers/weekly-report
-- **Booking:** https://cal.com/isabela-constantini-t-b5sqlt/15min
+- **Booking:** https://cal.com/bela-constantini-t/15min
 - **Contact:** t.constantini.isabela@gmail.com
 
 ## Tracking referrers

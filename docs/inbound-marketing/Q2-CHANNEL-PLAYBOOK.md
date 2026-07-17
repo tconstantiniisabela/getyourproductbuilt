@@ -29,7 +29,7 @@ Email/DM active referrers:
 ```
 Quick Q2 ask — any clients who promised leadership something internal before quarter end?
 
-We have fixed-scope slots for lead qual, inbox triage, or weekly reporting ($1.5K, ~5 days). Intro: https://cal.com/isabela-constantini-t-b5sqlt/15min
+We have fixed-scope slots for lead qual, inbox triage, or weekly reporting ($1.5K, ~5 days). Intro: https://cal.com/bela-constantini-t/15min
 ```
 
 ### Quora (3 answers)
