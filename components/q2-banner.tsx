@@ -3,19 +3,17 @@ import { ArrowRight } from "lucide-react";
 import { site } from "@/lib/site";
 import { ExternalLink } from "@/components/external-link";
 
-const Q2_DEADLINE = "June 30, 2026";
-
 export function Q2Banner() {
   return (
     <div
       role="region"
-      aria-label="Q2 shipping deadline"
+      aria-label="Fixed-scope delivery notice"
       className="border-b border-primary/20 bg-primary/5"
     >
       <div className="container flex flex-col gap-2 py-3 text-sm sm:flex-row sm:items-center sm:justify-between">
         <p className="text-pretty text-foreground">
-          <span className="font-semibold">Q2 deadline:</span> Ship one backlog item before{" "}
-          {Q2_DEADLINE} — fixed scope, deposit at kickoff, definition of done in writing.
+          Quarter-end passed; the internal tool still isn&apos;t shipped. Fixed scope, deposit at
+          kickoff, definition of done in writing.
         </p>
         <div className="flex shrink-0 items-center gap-4">
           <Link
@@ -36,5 +34,3 @@ export function Q2Banner() {
     </div>
   );
 }
-
-export { Q2_DEADLINE };
