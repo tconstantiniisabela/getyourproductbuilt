@@ -64,7 +64,11 @@ export async function POST(req: Request) {
 
     if (!response.ok) throw new Error(`Apps Script returned ${response.status}`);
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error(
+      "Telegram webhook relay failed:",
+      error instanceof Error ? error.message : "Unknown error",
+    );
     return NextResponse.json({ error: "Unable to process update" }, { status: 502 });
   }
 }
