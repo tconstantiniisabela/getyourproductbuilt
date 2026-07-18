@@ -54,10 +54,9 @@ export async function POST(req: Request) {
     if (response.status >= 300 && response.status < 400) {
       const location = response.headers.get("location");
       if (!location) throw new Error("Apps Script redirect missing Location header");
-      response = await fetch(withSecret(location, telegramSecret), {
-        method: "POST",
-        headers,
-        body,
+      response = await fetch(location, {
+        method: "GET",
+        redirect: "manual",
         signal: AbortSignal.timeout(10_000),
       });
     }
