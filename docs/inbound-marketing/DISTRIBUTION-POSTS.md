@@ -1,6 +1,6 @@
 # Distribution posts — r/SaaS + Indie Hackers
 
-Copy, personalize, post when ready. Lead with the **free tool**, not "hire us."
+Copy, personalize, post when ready. Default commercial CTA is **The Lead Qualifier**; soft posts can lead with the free estimator.
 
 ---
 
@@ -16,7 +16,7 @@ So we built a free estimator: 5 questions → recommended package + what's likel
 
 No email gate: https://getyourproductbuilt.com/tools/scope-estimator
 
-Context: we ship fixed-scope internal automations (lead qual, inbox triage, weekly reports) at AxisForge Labs. This tool is for anyone scoping a small build — not just our clients.
+Context: AxisForge Labs ships fixed-scope internal automations. Hero offer is The Lead Qualifier ($1,500 / 5 days); also inbox triage and weekly reports. This estimator is for anyone scoping a small build — not just our clients.
 
 Happy to answer scoping questions in the comments.
 

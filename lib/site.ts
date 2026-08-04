@@ -23,12 +23,16 @@ export const site = {
   /** Legal page last-updated stamps (ISO date) */
   privacyUpdated: "2026-05-28",
   termsUpdated: "2026-05-28",
-  // Case study walkthroughs — set NEXT_PUBLIC_LOOM_* in .env.local or paste URLs here
-  loomInbox: process.env.NEXT_PUBLIC_LOOM_INBOX?.trim() || "[YOUR_LOOM_URL_INBOX]",
+  // Case study walkthroughs — env overrides these defaults when set on Vercel
   loomLeadQualifier:
-    process.env.NEXT_PUBLIC_LOOM_LEAD_QUALIFIER?.trim() || "[YOUR_LOOM_URL_LEAD_QUALIFIER]",
+    process.env.NEXT_PUBLIC_LOOM_LEAD_QUALIFIER?.trim() ||
+    "https://www.loom.com/share/1f7bb81420ab4dd191bb487ca38cbf65",
+  loomInbox:
+    process.env.NEXT_PUBLIC_LOOM_INBOX?.trim() ||
+    "https://www.loom.com/share/5d77568456754699beb9e7bdf627d1d6",
   loomWeeklyReport:
-    process.env.NEXT_PUBLIC_LOOM_WEEKLY_REPORT?.trim() || "[YOUR_LOOM_URL_WEEKLY_REPORT]",
+    process.env.NEXT_PUBLIC_LOOM_WEEKLY_REPORT?.trim() ||
+    "https://www.loom.com/share/4a253bede72d4ce99bc0b16c041a88d8",
 } as const;
 
 /** Canonical site URL for outbound links (email, social drafts). Uses NEXT_PUBLIC_SITE_URL or SITE_URL when set. */
@@ -38,5 +42,21 @@ export function siteOrigin(): string {
       ? (process.env.NEXT_PUBLIC_SITE_URL ?? process.env.SITE_URL)?.trim()
       : undefined;
   if (fromEnv) return fromEnv.replace(/\/$/, "");
+  return `https://${site.domain}`;
+}
+
+/**
+ * Public production origin for customer-facing links in drafts (Reddit, email, etc.).
+ * Never returns localhost — local NEXT_PUBLIC_SITE_URL would leak into copy.
+ */
+export function publicSiteOrigin(): string {
+  const fromEnv =
+    typeof process !== "undefined"
+      ? (process.env.NEXT_PUBLIC_SITE_URL ?? process.env.SITE_URL)?.trim()
+      : undefined;
+  if (fromEnv) {
+    const cleaned = fromEnv.replace(/\/$/, "");
+    if (!/localhost|127\.0\.0\.1/i.test(cleaned)) return cleaned;
+  }
   return `https://${site.domain}`;
 }

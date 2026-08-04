@@ -1,22 +1,27 @@
-import { site, siteOrigin } from "@/lib/site";
+import { site, siteOrigin, publicSiteOrigin } from "@/lib/site";
 import { marketingPackages } from "@/lib/marketing";
 import type { Lead } from "@/lib/marketing-store";
 
+const HERO_OFFER_PATH = "/offers/lead-qualifier";
+
 export function outreachSubject(segment?: string): string {
   const seg = segment?.trim();
-  if (seg) return `${seg}: fixed-scope internal tools (quick question)`;
-  return "Fixed-scope build for your next internal tool?";
+  if (seg) return `${seg}: lead qualifier in 5 days (fixed scope)`;
+  return "Lead qualifier for your inbound form — fixed $1,500?";
 }
 
 export function outreachBody(lead: Pick<Lead, "name" | "company">): string {
   const greet = lead.name?.trim() ? `Hi ${lead.name.trim()},` : "Hi,";
   const co = lead.company?.trim() ? ` At ${lead.company.trim()},` : "";
+  const origin = publicSiteOrigin();
   return [
     greet,
     "",
-    `We help teams ship bounded internal tools and AI-assisted workflows—written scope, deposit at kickoff, and a clear definition of done.${co} Our builds sit in fixed tiers (${marketingPackages.map((p) => p.price).join(", ")}) so procurement gets a clean quote.`,
+    `We help B2B teams ship a fixed-scope Lead Qualifier—webhook → enrich → ICP score → Slack draft for human approval → CRM.${co} $1,500, five business days, written scope before deposit.`,
     "",
-    `If a backlog item keeps slipping, we can usually map fit on a short intro call: ${siteOrigin()} · ${site.calcomUrl}`,
+    `Full scope: ${origin}${HERO_OFFER_PATH}`,
+    `Other packages (${marketingPackages.map((p) => p.price).join(", ")}) if the shape differs: ${siteOrigin()}`,
+    `Intro call: ${site.calcomUrl}`,
     "",
     "— AxisForge Labs",
     "",

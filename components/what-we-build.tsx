@@ -1,25 +1,32 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const builds = [
   {
-    title: "AI Lead Qualifier",
+    title: "The Lead Qualifier",
     description:
       "Qualifies incoming leads, prepares context, routes them to the right owner, and drafts a human-approved follow-up.",
+    href: "/offers/lead-qualifier",
+    badge: "Hero offer",
   },
   {
-    title: "AI Client Onboarding Assistant",
+    title: "Inbox Triage",
     description:
-      "Turns a closed deal into assigned onboarding tasks, required access, internal context, and client-ready next steps.",
+      "Classifies shared-inbox mail, drafts replies in your voice for approval, and escalates what needs a human.",
+    href: "/offers/inbox-triage",
   },
   {
-    title: "AI Operations Brief",
+    title: "The Weekly Report",
     description:
       "Pulls data from agreed sources, identifies patterns or blockers, and prepares a human-reviewed weekly decision brief.",
+    href: "/offers/weekly-report",
   },
   {
-    title: "Custom Internal AI Tool",
+    title: "Custom internal AI tool",
     description:
-      "A focused internal app that helps a team search, classify, summarize, prioritize, or coordinate work faster.",
+      "A focused app for search, classify, summarize, or coordinate—including shapes like client onboarding assistants when scoped as a custom build.",
+    href: "#pricing",
   },
 ];
 
@@ -36,17 +43,37 @@ export function WhatWeBuild() {
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
             Each engagement targets one operational bottleneck—scoped, priced, and delivered with
-            acceptance criteria your team can sign off on.
+            acceptance criteria your team can sign off on. Most outbound conversations start with
+            The Lead Qualifier.
           </p>
         </div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {builds.map((item) => (
-            <Card key={item.title} className="p-8">
-              <h3 className="text-lg font-semibold tracking-tight">{item.title}</h3>
+            <Card
+              key={item.title}
+              className={`p-8 ${item.badge ? "border-primary ring-1 ring-primary/20" : ""}`}
+            >
+              {item.badge ? (
+                <p className="text-xs font-semibold uppercase tracking-wide text-primary">
+                  {item.badge}
+                </p>
+              ) : null}
+              <h3
+                className={`text-lg font-semibold tracking-tight ${item.badge ? "mt-2" : ""}`}
+              >
+                {item.title}
+              </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {item.description}
               </p>
+              <Link
+                href={item.href}
+                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary underline-offset-4 hover:underline"
+              >
+                {item.href.startsWith("/offers/") ? "View full scope" : "See packages"}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </Card>
           ))}
         </div>

@@ -27,9 +27,14 @@ export function LoomWalkthrough({
 
   if (!id) {
     return (
-      <p className="rounded-md border border-dashed border-border bg-muted/30 p-4 text-sm text-muted-foreground">
-        Walkthrough recording available on request during an intro call.
-      </p>
+      <div className="rounded-md border border-dashed border-border bg-muted/30 p-4 text-sm text-muted-foreground">
+        <p className="font-medium text-foreground">Public walkthrough pending</p>
+        <p className="mt-2 leading-relaxed">
+          We record a Loom of this build shape for the site as soon as the demo environment is
+          ready. Until then, ask for a live walkthrough on the intro call—no invented client logos
+          or unnamed “case study” claims.
+        </p>
+      </div>
     );
   }
 
@@ -55,7 +60,7 @@ export function LoomWalkthrough({
           <div>
             <div className="text-sm font-semibold">{title}</div>
             <div className="text-sm text-muted-foreground">
-              Representative delivery — anonymized metrics
+              Product walkthrough
             </div>
           </div>
         </div>

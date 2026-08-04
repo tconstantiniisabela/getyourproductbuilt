@@ -14,9 +14,14 @@ export function Hero() {
           Custom AI tools for the workflows slowing down your business.
         </h1>
         <p className="mt-6 max-w-3xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          {site.companyShort} designs and builds fixed-scope AI-powered systems for B2B companies.
-          We connect your existing tools, automate repetitive handoffs, and add AI where
-          unstructured information, prioritization, or drafting requires judgment.
+          {site.companyShort} builds fixed-scope AI systems for B2B companies. Most teams start with{" "}
+          <Link
+            href="/offers/lead-qualifier"
+            className="font-medium text-foreground underline-offset-4 hover:underline"
+          >
+            The Lead Qualifier
+          </Link>
+          —enrich, score, and draft a human-approved first touch in five days at a fixed price.
         </p>
         <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
           <Button asChild size="lg">
@@ -25,17 +30,17 @@ export function Hero() {
               <ArrowRight className="h-4 w-4" />
             </ExternalLink>
           </Button>
-          <Link
-            href="#what-we-build"
-            className="text-sm font-medium text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
-          >
-            See what we build
-          </Link>
+          <Button asChild size="lg" variant="outline">
+            <Link href="/offers/lead-qualifier">
+              View Lead Qualifier
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Button>
           <Link
             href="#pricing"
             className="text-sm font-medium text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
           >
-            See pricing
+            See all packages
           </Link>
         </div>
         <dl className="mt-14 grid gap-6 border-t border-border pt-10 sm:grid-cols-3">
