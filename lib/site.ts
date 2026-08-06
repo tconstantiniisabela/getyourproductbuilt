@@ -14,9 +14,9 @@ export const site = {
   /** Plain hostname only (no https://). Used for SEO metadata when deployed. */
   domain: "getyourproductbuilt.com",
   email: "t.constantini.isabela@gmail.com",
-  xHandle: "belaconstantinit",
-  xUrl: "https://x.com/belaconstantinit",
-  linkedinUrl: "https://www.linkedin.com/in/isabela-constantini-t/",
+  xHandle: "AxisForgeLabs",
+  xUrl: "https://x.com/AxisForgeLabs",
+  linkedinUrl: "https://www.linkedin.com/company/axisforge-labs/",
   calcomUrl: "https://cal.com/bela-constantini-t/15min",
   /** Primary booking CTA — keep consistent across the site */
   ctaLabel: "Book a free intro call",

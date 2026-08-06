@@ -14,19 +14,14 @@ export function Hero() {
           Custom AI tools for the workflows slowing down your business.
         </h1>
         <p className="mt-6 max-w-3xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          {site.companyShort} builds fixed-scope AI systems for B2B companies. Most teams start with{" "}
-          <Link
-            href="/offers/lead-qualifier"
-            className="font-medium text-foreground underline-offset-4 hover:underline"
-          >
-            The Lead Qualifier
-          </Link>
-          —enrich, score, and draft a human-approved first touch in five days at a fixed price.
+          First we understand how your team works today. Then we build a custom AI tool that takes
+          hours of manual work off their plate — designed around your process, at the automation
+          level you prefer.
         </p>
         <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
           <Button asChild size="lg">
             <ExternalLink href={site.calcomUrl}>
-              Book a short intro
+              {site.ctaLabel}
               <ArrowRight className="h-4 w-4" />
             </ExternalLink>
           </Button>
